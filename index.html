@@ -47,9 +47,14 @@
                             blue: '#0066cc',
                             dark: '#003087',
                             light: '#f0f7ff',
-                            orange: '#ff6600',
-                            orangeHover: '#e65c00'
+                            orange: '#ff7a00',
+                            orangeHover: '#e65c00',
+                            accentGray: '#475569',
+                            mocha: '#c19a6b'
                         }
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(135deg, rgba(0,48,135,0.92) 0%, rgba(0,102,204,0.85) 100%)',
                     }
                 }
             }
@@ -176,59 +181,59 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center hero-bg pt-20">
-        <div class="absolute inset-0 bg-pattern opacity-50"></div>
-        
+    <section id="home" class="relative min-h-[90vh] flex items-center hero-bg pt-20">
+        <div class="absolute inset-0 bg-pattern opacity-100"></div>
+
         <div class="container mx-auto px-4 relative z-10 py-12">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8">
-                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                    <span class="text-white/90 font-medium text-sm">Работаем в Сочи и Краснодарском крае</span>
+            <div class="max-w-5xl">
+                <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-full px-5 py-2.5 mb-8 animate-fade-in-up">
+                    <span class="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-white font-medium text-sm">Работаем в Сочи и Краснодарском крае</span>
                 </div>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
                     Надёжный системный интегратор в <span class="text-brand-orange">Сочи</span>
                 </h1>
-                
-                <p class="text-lg md:text-xl text-white/90 mb-8 font-light max-w-2xl leading-relaxed">
+
+                <p class="text-lg md:text-xl text-white/95 mb-10 font-light max-w-3xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s">
                     Монтаж СКС · ВОЛС · Видеонаблюдение · СКУД · IT-аутсорсинг · Электромонтаж
                 </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <a href="#contact-form" class="bg-brand-blue hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-500/40 transform hover:-translate-y-1 hover:shadow-xl text-center">
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up" style="animation-delay: 0.3s">
+                    <a href="#contact-form" class="bg-brand-blue hover:bg-blue-700 text-white text-lg px-10 py-5 rounded-2xl font-bold transition shadow-lg shadow-blue-500/40 transform hover:-translate-y-1 hover:shadow-xl text-center">
                         <i class="fa-solid fa-calculator mr-2"></i>
                         Подобрать решение
                     </a>
-                    <a href="tel:+79882340095" class="bg-brand-orange hover:bg-brand-orangeHover text-white text-lg px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-orange-500/40 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2">
+                    <a href="tel:+79882340095" class="bg-brand-orange hover:bg-brand-orangeHover text-white text-lg px-10 py-5 rounded-2xl font-bold transition shadow-lg shadow-orange-500/40 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2 pulse-glow">
                         <i class="fa-solid fa-phone"></i>
                         Позвонить +7 (988) 234-00-95
                     </a>
                 </div>
-                
+
                 <!-- Trust Badges -->
-                <div class="flex flex-wrap gap-4 text-white/80 text-sm font-medium">
-                    <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <div class="flex flex-wrap gap-3 text-white/90 text-sm font-medium">
+                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
                         <i class="fa-solid fa-shield-halved text-brand-orange"></i>
                         <span>Гарантия до 60 мес.</span>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
                         <i class="fa-solid fa-clock text-brand-orange"></i>
                         <span>Выезд за 2 часа</span>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
                         <i class="fa-solid fa-certificate text-brand-orange"></i>
                         <span>Лицензии МЧС</span>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
                         <i class="fa-solid fa-users text-brand-orange"></i>
                         <span>Опыт 15+ лет</span>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60">
             <a href="#services" aria-label="Прокрутить вниз">
                 <i class="fa-solid fa-chevron-down text-2xl"></i>
             </a>
@@ -238,10 +243,10 @@
     <!-- Services Section -->
     <section id="services" class="py-24 bg-brand-light">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-in-up">
                 <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-3 block">Что мы предлагаем</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Наши Услуги</h2>
-                <div class="w-24 h-1.5 bg-brand-orange mx-auto rounded-full mb-6"></div>
+                <h2 class="text-4xl md:text-6xl font-bold text-brand-dark mb-6">Наши Услуги</h2>
+                <div class="w-32 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full mb-6"></div>
                 <p class="text-slate-600 max-w-2xl mx-auto text-lg">
                     Полный цикл работ: от проектирования и поставки оборудования до монтажа и технического обслуживания
                 </p>
@@ -249,11 +254,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.1s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-server"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Проектирование и монтаж структурированных кабельных систем. Сертификация Fluke.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 450 ₽ / точка</span>
@@ -262,11 +267,11 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.2s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-globe"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Прокладка оптоволокна, сварка, тестирование рефлектометром. Линии любой длины.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По проекту</span>
@@ -275,11 +280,11 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.3s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-video"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">IP и аналоговые системы. Удаленный доступ. Аналитика и распознавание лиц.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 3 500 ₽ / камера</span>
@@ -288,11 +293,11 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.4s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-id-card"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">СКУД</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">СКУД</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Турникеты, шлагбаумы, биометрия, учет рабочего времени. Интеграция с 1С.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По запросу</span>
@@ -301,11 +306,11 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.5s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-headset"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Абонентское обслуживание офисов. Администрирование серверов, защита данных.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 15 000 ₽ / мес</span>
@@ -314,11 +319,11 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group animate-scale-in" style="animation-delay: 0.6s">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Монтаж щитового оборудования, освещение, розеточные группы. Допуски.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По смете</span>
@@ -801,7 +806,7 @@
                 <p class="text-slate-600 text-sm">Оставьте номер, инженер свяжется в течение 15 минут</p>
             </div>
             
-            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы перезвоним вам в ближайшее время.'); toggleModal('callbackModal');">
+            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы перезвоним вам в ближ��йшее время.'); toggleModal('callbackModal');">
                 <div class="mb-4">
                     <label class="block text-slate-700 text-sm font-semibold mb-2" for="modal-name">Ваше имя</label>
                     <input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition" type="text" id="modal-name" placeholder="Иван Иванов" required>
