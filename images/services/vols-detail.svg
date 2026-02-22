@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#003087"/>
+  <path d="M 100 250 Q 400 100 700 250" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-dasharray="20 10"/>
+  <text x="400" y="380" font-family="Arial,sans-serif" font-size="22" fill="white" text-anchor="middle">Монтаж ВОЛС</text>
+</svg>

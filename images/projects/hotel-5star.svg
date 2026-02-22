@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#553c9a"/>
+  <rect x="200" y="150" width="400" height="250" rx="8" fill="rgba(255,255,255,0.12)"/>
+  <text x="400" y="480" font-family="Arial,sans-serif" font-size="26" fill="white" text-anchor="middle">Отель 5 звёзд</text>
+  <text x="400" y="515" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">IT-инфраструктура</text>
+</svg>

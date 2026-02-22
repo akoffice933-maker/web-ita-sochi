@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#2c5282"/>
+  <polygon points="400,120 600,400 200,400" fill="rgba(255,255,255,0.1)"/>
+  <text x="400" y="480" font-family="Arial,sans-serif" font-size="26" fill="white" text-anchor="middle">Горки Город</text>
+  <text x="400" y="520" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">курорт, видеонаблюдение</text>
+</svg>

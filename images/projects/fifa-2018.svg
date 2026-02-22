@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a365d"/>
+  <ellipse cx="400" cy="300" rx="220" ry="120" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
+  <text x="400" y="280" font-family="Arial,sans-serif" font-size="32" fill="white" text-anchor="middle">FIFA 2018</text>
+  <text x="400" y="330" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.8)" text-anchor="middle">Стадион Фишт, Сочи</text>
+</svg>

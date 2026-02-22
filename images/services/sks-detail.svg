@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0066cc"/>
+  <rect x="200" y="100" width="400" height="80" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="300" cy="350" r="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3"/>
+  <circle cx="500" cy="350" r="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3"/>
+  <line x1="340" y1="350" x2="460" y2="350" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <text x="400" y="430" font-family="Arial,sans-serif" font-size="22" fill="white" text-anchor="middle">Монтаж СКС</text>
+</svg>
