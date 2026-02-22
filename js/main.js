@@ -196,11 +196,10 @@ function initFormValidation() {
  * Initialize Lazy Loading for Images
  */
 function initLazyLoading() {
-    if ('loading' in HTMLImageElement.prototype) {
-        document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
-            img.src = img.dataset.src || img.src;
-        });
-    } else {
+    // Native lazy loading is already handled by loading="lazy" attribute
+    // No need to modify src if data-src is not present
+    if (!('loading' in HTMLImageElement.prototype)) {
+        // Fallback for browsers that don't support native lazy loading
         var script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
         script.async = true;
