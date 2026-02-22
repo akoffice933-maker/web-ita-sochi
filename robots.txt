@@ -1,0 +1,11 @@
+# robots.txt для сайта ITA Сочи
+User-agent: *
+Allow: /
+
+# Запрет на индексацию служебных страниц
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /tmp/
+
+# Карта сайта
+Sitemap: https://ita-sochi.ru/sitemap.xml

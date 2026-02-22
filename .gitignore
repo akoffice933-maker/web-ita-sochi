@@ -1,0 +1,22 @@
+# Логи и временные файлы
+logs/*.log
+logs/requests.log
+*.log
+
+# Системные и редакторы
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# Локальные настройки (если появятся)
+.env
+.env.local
+*.local
+
+# Резервные копии
+*.bak
+*~

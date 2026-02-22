@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности | ИТА Сочи</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { blue: '#0066cc', dark: '#003087', light: '#f0f7ff', orange: '#ff6600', orangeHover: '#e65c00' } } } } };
+    </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-slate-200" id="main-header">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl flex items-center justify-center text-white text-xl font-bold">И</div>
+                <div class="flex flex-col"><span class="text-2xl font-bold text-brand-dark leading-none">ИТА</span><span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span></div>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-1 font-medium">
+                <a href="index.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Главная</a>
+                <a href="pages/uslugi.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Услуги</a>
+                <a href="pages/catalog.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Продукты</a>
+                <a href="pages/projects.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Проекты</a>
+                <a href="pages/about.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">О компании</a>
+                <a href="pages/blog.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Блог</a>
+                <a href="pages/contacts.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Контакты</a>
+            </nav>
+            <a href="tel:+79882340095" class="hidden lg:flex items-center gap-2 text-brand-dark font-bold hover:text-brand-blue"><i class="fa-solid fa-phone text-brand-orange"></i><span class="text-sm">+7 (988) 234-00-95</span></a>
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 p-2" onclick="toggleMobileMenu()" aria-label="Меню"><i class="fa-solid fa-bars text-2xl"></i></button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-20 shadow-xl overflow-hidden transition-all duration-300 max-h-0">
+            <div class="flex flex-col p-6 space-y-2">
+                <a href="index.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Главная</a>
+                <a href="pages/uslugi.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Услуги</a>
+                <a href="pages/projects.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Проекты</a>
+                <a href="pages/contacts.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Контакты</a>
+                <div class="pt-4 border-t"><a href="tel:+79882340095" class="flex items-center gap-3 text-brand-dark font-bold py-3 px-4"><i class="fa-solid fa-phone text-brand-orange"></i><span>+7 (988) 234-00-95</span></a></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="text-4xl font-bold text-brand-dark mb-8">Политика конфиденциальности</h1>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-slate-600 mb-6">Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую сайт https://ita-sochi.ru может получить о пользователе во время использования сайта.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">1. Определение терминов</h2>
+                <p class="text-slate-600 mb-4">1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600">
+                    <li>«Администрация сайта» – уполномоченные сотрудники на управления сайтом, действующие от имени ООО «ИТА», которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</li>
+                    <li>«Персональные данные» — любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</li>
+                    <li>«Обработка персональных данных» — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</li>
+                </ul>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">2. Общие положения</h2>
+                <p class="text-slate-600 mb-4">2.1. Использование сайта https://ita-sochi.ru означает безоговорочное согласие пользователя с настоящей Политикой конфиденциальности и указанными в ней условиями обработки его персональной информации.</p>
+                <p class="text-slate-600 mb-4">2.2. В случае несогласия с условиями Политики конфиденциальности пользователь должен прекратить использование сайта.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">3. Предмет политики конфиденциальности</h2>
+                <p class="text-slate-600 mb-4">3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые пользователь предоставляет при заполнении форм обратной связи.</p>
+                <p class="text-slate-600 mb-4">3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются пользователем путём заполнения форм обратной связи и включают в себя следующую информацию:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600">
+                    <li>фамилию, имя, отчество пользователя;</li>
+                    <li>контактный телефон пользователя;</li>
+                    <li>адрес электронной почты (e-mail);</li>
+                </ul>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">4. Цели сбора персональной информации пользователя</h2>
+                <p class="text-slate-600 mb-4">4.1. Персональные данные пользователя Администрация сайта может использовать в целях:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600">
+                    <li>Установления с пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования сайта, оказания услуг, обработка запросов и заявок от пользователя.</li>
+                    <li>Подтверждения достоверности и полноты персональных данных, предоставленных пользователем.</li>
+                </ul>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">5. Способы и сроки обработки информации</h2>
+                <p class="text-slate-600 mb-4">5.1. Обработка персональных данных пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств.</p>
+                <p class="text-slate-600 mb-4">5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим лицам, исключительно в целях выполнения заявки пользователя.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">6. Обязательства сторон</h2>
+                <p class="text-slate-600 mb-4">6.1. Пользователь обязан предоставить достоверную информацию о персональных данных, необходимую для пользования сайтом.</p>
+                <p class="text-slate-600 mb-4">6.2. Администрация сайта обязана использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики конфиденциальности.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">7. Ответственность сторон</h2>
+                <p class="text-slate-600 mb-4">7.1. Администрация сайта несёт ответственность за утрату персональных данных в соответствии с законодательством РФ.</p>
+                <h2 class="text-2xl font-bold text-brand-dark mt-8 mb-4">8. Дополнительные условия</h2>
+                <p class="text-slate-600 mb-4">8.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия пользователя.</p>
+                <p class="text-slate-600 mb-4">8.2. Новая Политика конфиденциальности вступает в силу с момента её размещения на сайте, если иное не предусмотрено новой редакцией Политики конфиденциальности.</p>
+                <div class="border-t border-slate-200 mt-12 pt-8">
+                    <p class="text-slate-500">Дата последнего обновления: 22 февраля 2026 г.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl flex items-center justify-center text-white text-xl font-bold">И</div>
+                        <div><span class="text-2xl font-bold text-white">ИТА</span><span class="text-xs text-slate-500 block">Сочи</span></div>
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6">Системный интегратор с 2011 года.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Контакты</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i>г. Сочи, ул. Севастопольская, 25</li>
+                        <li><i class="fa-solid fa-phone text-brand-orange mr-2"></i><a href="tel:+79882340095" class="hover:text-white">+7 (988) 234-00-95</a></li>
+                        <li><i class="fa-solid fa-envelope text-brand-orange mr-2"></i><a href="mailto:info@ita-sochi.ru" class="hover:text-white">info@ita-sochi.ru</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Разделы</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="pages/uslugi.html" class="hover:text-brand-blue transition">Услуги</a></li>
+                        <li><a href="pages/projects.html" class="hover:text-brand-blue transition">Проекты</a></li>
+                        <li><a href="pages/contacts.html" class="hover:text-brand-blue transition">Контакты</a></li>
+                        <li><a href="index.html" class="hover:text-brand-blue transition">На главную</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 ИТА Сочи. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

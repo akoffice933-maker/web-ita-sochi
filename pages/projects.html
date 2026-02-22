@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты системного интегратора ИТА в Сочи | Портфолио</title>
+    <meta name="description" content="Реализованные проекты компании ИТА в Сочи и Краснодарском крае. FIFA 2018, Олимпиада 2014, Горки Город, Сочиводоканал и другие.">
+    <meta property="og:title" content="Проекты ИТА Сочи | Портфолио">
+    <meta property="og:description" content="Крупные проекты: FIFA 2018, Олимпиада 2014, Горки Город">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { blue: '#0066cc', dark: '#003087', light: '#f0f7ff', orange: '#ff6600', orangeHover: '#e65c00' } } } } };
+    </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-slate-200 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg">И</div>
+                <div class="flex flex-col"><span class="text-2xl font-bold text-brand-dark leading-none">ИТА</span><span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span></div>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-1 font-medium">
+                <a href="../index.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Главная</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition flex items-center gap-1">Услуги <i class="fa-solid fa-chevron-down text-xs"></i></button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <a href="uslugi.html#sks" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue rounded-t-xl">Монтаж СКС</a>
+                        <a href="uslugi.html#vols" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Монтаж ВОЛС</a>
+                        <a href="uslugi.html#video" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Видеонаблюдение</a>
+                        <a href="uslugi.html#skud" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue">СКУД</a>
+                        <a href="uslugi.html#it" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue">IT-аутсорсинг</a>
+                        <a href="uslugi.html#electro" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-brand-blue rounded-b-xl">Электромонтаж</a>
+                    </div>
+                </div>
+                <a href="catalog.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Продукты</a>
+                <a href="projects.html" class="px-4 py-2 text-brand-blue bg-blue-50 rounded-lg transition">Проекты</a>
+                <a href="about.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">О компании</a>
+                <a href="blog.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Блог</a>
+                <a href="contacts.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Контакты</a>
+            </nav>
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="https://wa.me/79882340095" class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-green-600 text-xl"></i></a>
+                <a href="tel:+79882340095" class="flex items-center gap-2 text-brand-dark font-bold hover:text-brand-blue transition group">
+                    <div class="w-9 h-9 bg-brand-orange/10 rounded-full flex items-center justify-center group-hover:bg-brand-orange group-hover:text-white transition"><i class="fa-solid fa-phone text-brand-orange group-hover:text-white text-sm"></i></div>
+                    <span class="text-sm">+7 (988) 234-00-95</span>
+                </a>
+                <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-6 py-3 rounded-full font-semibold transition shadow-lg pulse-glow">Заказать звонок</button>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 p-2 hover:bg-slate-100 rounded-lg" onclick="toggleMobileMenu()" aria-label="Меню"><i class="fa-solid fa-bars text-2xl"></i></button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-20 shadow-xl overflow-hidden transition-all duration-300 max-h-0">
+            <div class="flex flex-col p-6 space-y-2">
+                <a href="../index.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Главная</a>
+                <a href="uslugi.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Услуги</a>
+                <a href="projects.html" class="text-lg font-medium text-brand-blue bg-blue-50 py-3 px-4 rounded-lg" onclick="toggleMobileMenu()">Проекты</a>
+                <a href="catalog.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Продукты</a>
+                <a href="about.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">О компании</a>
+                <a href="blog.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Блог</a>
+                <a href="contacts.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Контакты</a>
+                <div class="pt-4 border-t mt-2">
+                    <a href="tel:+79882340095" class="flex items-center gap-3 text-brand-dark font-bold py-3 px-4 bg-brand-orange/10 rounded-lg"><i class="fa-solid fa-phone text-brand-orange"></i><span>+7 (988) 234-00-95</span></a>
+                    <a href="https://wa.me/79882340095" class="flex items-center gap-3 text-green-700 font-bold py-3 px-4 bg-green-50 rounded-lg mt-2"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-16 bg-gradient-to-r from-brand-dark to-brand-blue">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Наши Проекты</h1>
+                <div class="flex items-center gap-2 text-blue-200">
+                    <a href="../index.html" class="hover:text-white transition">Главная</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span class="text-white">Проекты</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <section class="py-8 border-b border-slate-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-3">
+                <button class="filter-btn active px-5 py-2 rounded-full bg-brand-blue text-white font-medium" data-filter="all">Все проекты</button>
+                <button class="filter-btn px-5 py-2 rounded-full bg-slate-100 hover:bg-slate-200 font-medium" data-filter="sport">Спортивные</button>
+                <button class="filter-btn px-5 py-2 rounded-full bg-slate-100 hover:bg-slate-200 font-medium" data-filter="commercial">Коммерческие</button>
+                <button class="filter-btn px-5 py-2 rounded-full bg-slate-100 hover:bg-slate-200 font-medium" data-filter="industrial">Промышленные</button>
+                <button class="filter-btn px-5 py-2 rounded-full bg-slate-100 hover:bg-slate-200 font-medium" data-filter="hotel">Гостиницы</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="sport">
+                    <img src="../images/projects/fifa-2018.jpg" alt="FIFA 2018 стадион Фишт" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Спорт</span>
+                            <span class="text-xs text-slate-400">2018</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">FIFA 2018, стадион «Фишт»</h3>
+                        <p class="text-slate-600 text-sm mb-4">Монтаж СКС и ВОЛС для инфраструктуры ЧМ по футболу. Более 5000 точек доступа, сертификация Fluke.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• СКС (кат.6)</li><li>• Магистральная ВОЛС 48 волокон</li><li>• Wi-Fi покрытие трибун</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="sport">
+                    <img src="../images/projects/olimpiada-2014.jpg" alt="Олимпиада 2014" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Спорт</span>
+                            <span class="text-xs text-slate-400">2014</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Олимпиада 2014, Красная Поляна</h3>
+                        <p class="text-slate-600 text-sm mb-4">Обеспечение связью олимпийских объектов в горном кластере.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• ВОЛС между объектами (28 км)</li><li>• Видеонаблюдение</li><li>• СКУД</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="hotel">
+                    <img src="../images/projects/gorki-gorod.jpg" alt="Горки Город" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Гостиница</span>
+                            <span class="text-xs text-slate-400">2016</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Горки Город</h3>
+                        <p class="text-slate-600 text-sm mb-4">Комплексная система безопасности и IT-инфраструктура для горнолыжного курорта.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• IP-видеонаблюдение 250 камер</li><li>• СКУД на 120 точек</li><li>• Wi-Fi в апартаментах</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="industrial">
+                    <img src="../images/projects/sochivodokanal.jpg" alt="Сочиводоканал" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Промышленность</span>
+                            <span class="text-xs text-slate-400">2019</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Сочиводоканал</h3>
+                        <p class="text-slate-600 text-sm mb-4">Автоматизация технологических процессов и диспетчеризация.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• Промышленные сети (Profibus)</li><li>• SCADA</li><li>• Удалённый мониторинг</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="commercial">
+                    <img src="../images/projects/hotel-5star.jpg" alt="БЦ Панорама" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Бизнес-центр</span>
+                            <span class="text-xs text-slate-400">2021</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">БЦ «Панорама»</h3>
+                        <p class="text-slate-600 text-sm mb-4">СКС для офисного центра класса А.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• СКС на 1200 портов (кат.6А)</li><li>• ВОЛС 10G</li><li>• Wi-Fi 6</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition" data-category="hotel">
+                    <img src="../images/projects/hotel-5star.jpg" alt="Отель Прима" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full">Отель</span>
+                            <span class="text-xs text-slate-400">2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Отель «Прима» 4*</h3>
+                        <p class="text-slate-600 text-sm mb-4">IT-инфраструктура и безопасность для гостиницы в центре Сочи.</p>
+                        <div class="border-t border-slate-100 pt-4">
+                            <h4 class="font-semibold text-sm mb-2">Выполненные работы:</h4>
+                            <ul class="space-y-1 text-xs text-slate-500"><li>• Видеонаблюдение (80 камер)</li><li>• СКУД + PMS</li><li>• Гостевая Wi-Fi</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-brand-dark mb-4">Хотите так же?</h3>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Расскажите о вашем проекте — предложим решение и предварительную смету</p>
+            <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold transition shadow-lg inline-flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i>Обсудить проект</button>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="../index.html" class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl flex items-center justify-center text-white text-xl font-bold">И</div>
+                        <div><span class="text-2xl font-bold text-white">ИТА</span><span class="text-xs text-slate-500 block">Сочи</span></div>
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6">Системный интегратор с 2011 года.</p>
+                    <div class="flex space-x-3">
+                        <a href="https://vk.com/ita_sochi" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue transition"><i class="fa-brands fa-vk"></i></a>
+                        <a href="https://t.me/ita_sochi" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue transition"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/79882340095" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Контакты</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i>г. Сочи, ул. Севастопольская, 25</li>
+                        <li><i class="fa-solid fa-phone text-brand-orange mr-2"></i><a href="tel:+79882340095" class="hover:text-white">+7 (988) 234-00-95</a></li>
+                        <li><i class="fa-solid fa-envelope text-brand-orange mr-2"></i><a href="mailto:info@ita-sochi.ru" class="hover:text-white">info@ita-sochi.ru</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Разделы</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="uslugi.html" class="hover:text-brand-blue transition">Услуги</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-blue transition">Проекты</a></li>
+                        <li><a href="catalog.html" class="hover:text-brand-blue transition">Каталог</a></li>
+                        <li><a href="blog.html" class="hover:text-brand-blue transition">Блог</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-brand-blue transition">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div><h4 class="text-white font-bold mb-6">Партнёры</h4><div class="flex flex-wrap gap-3 text-sm"><span class="bg-white/10 px-4 py-2 rounded-lg">Fluke</span><span class="bg-white/10 px-4 py-2 rounded-lg">Hikvision</span><span class="bg-white/10 px-4 py-2 rounded-lg">Legrand</span></div></div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 ИТА Сочи. Все права защищены.</p>
+                <p>Системный интегратор в Сочи и Краснодарском крае</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="callbackModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[60] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+            <button onclick="toggleModal('callbackModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100" aria-label="Закрыть"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-phone text-brand-orange text-2xl"></i></div>
+                <h3 class="text-2xl font-bold text-brand-dark mb-2">Заказать звонок</h3>
+                <p class="text-slate-600 text-sm">Оставьте номер, инженер свяжется в течение 15 минут</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы перезвоним вам.'); toggleModal('callbackModal');">
+                <div class="mb-4"><label class="block text-slate-700 text-sm font-semibold mb-2">Ваше имя</label><input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl" type="text" placeholder="Иван Иванов" required></div>
+                <div class="mb-6"><label class="block text-slate-700 text-sm font-semibold mb-2">Телефон</label><input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl" type="tel" placeholder="+7 (___) ___-__-__" required></div>
+                <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-4 rounded-xl transition">Жду звонка</button>
+            </form>
+        </div>
+    </div>
+    <a href="https://wa.me/79882340095" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp text-3xl"></i></a>
+    <script src="../js/main.js"></script>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(function(b) {
+                    b.classList.remove('active', 'bg-brand-blue', 'text-white');
+                    b.classList.add('bg-slate-100');
+                });
+                this.classList.add('active', 'bg-brand-blue', 'text-white');
+                var filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.project-card').forEach(function(card) {
+                    card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
