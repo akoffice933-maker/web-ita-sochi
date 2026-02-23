@@ -382,19 +382,22 @@
     </header>
 
     <!-- Hero Section with Video Background -->
-    <section id="home" class="video-bg-container min-h-[95vh] flex items-center pt-20">
+    <section id="home" class="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
         <!-- Video Background -->
-        <video class="video-bg" autoplay muted loop playsinline poster="images/hero-bg.svg">
-            <source src="https://videos.pexels.com/video-files/2841028/2841028-uhd_2560_1440_25fps.mp4" type="video/mp4">
-            <!-- Альтернативное видео: серверная/технологии -->
-            <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_30fps.mp4" type="video/mp4">
-        </video>
-        
-        <!-- Gradient Overlay -->
-        <div class="video-bg-overlay"></div>
+        <div class="absolute inset-0 bg-brand-dark">
+            <!-- Видео с CDN с fallback на изображение -->
+            <video class="video-bg" autoplay muted loop playsinline poster="images/hero-bg.svg" onerror="this.style.display='none'">
+                <source src="https://cdn.pixabay.com/video/2020/05/25/38894-425373283_large.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2019/04/06/22880-331023992_large.mp4" type="video/mp4">
+            </video>
+            <!-- Fallback градиент если видео не загрузилось -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark opacity-95"></div>
+            <!-- Pattern overlay -->
+            <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        </div>
         
         <!-- Content -->
-        <div class="video-bg-content container mx-auto px-4 relative z-10 py-12">
+        <div class="container mx-auto px-4 relative z-10 py-12">
             <div class="max-w-6xl">
                 <!-- Glass Badge -->
                 <div class="glass-badge inline-flex items-center gap-2 px-5 py-2.5 mb-8 scroll-reveal">
@@ -446,8 +449,8 @@
             </div>
         </div>
 
-        <!-- Scroll Down Indicator with Parallax -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60">
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60 z-10">
             <a href="#services" aria-label="Прокрутить вниз" class="glass-button w-12 h-12 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-chevron-down text-xl"></i>
             </a>
