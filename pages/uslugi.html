@@ -178,28 +178,132 @@
                 <a href="blog.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Блог</a>
                 <a href="contacts.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Контакты</a>
             </nav>
+            <!-- Actions -->
             <div class="hidden lg:flex items-center space-x-4">
-                <a href="https://wa.me/79882340095" class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-green-600 text-xl"></i></a>
+                <a href="https://wa.me/79882340095" class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-green-600 text-xl hover:text-white"></i>
+                </a>
                 <a href="tel:+79882340095" class="flex items-center gap-2 text-brand-dark font-bold hover:text-brand-blue transition group">
-                    <div class="w-9 h-9 bg-brand-orange/10 rounded-full flex items-center justify-center group-hover:bg-brand-orange group-hover:text-white transition"><i class="fa-solid fa-phone text-brand-orange group-hover:text-white text-sm"></i></div>
+                    <div class="w-9 h-9 bg-brand-orange/10 rounded-full flex items-center justify-center group-hover:bg-brand-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-phone text-brand-orange group-hover:text-white text-sm"></i>
+                    </div>
                     <span class="text-sm">+7 (988) 234-00-95</span>
                 </a>
-                <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-6 py-3 rounded-full font-semibold transition shadow-lg pulse-glow">Заказать звонок</button>
+                <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-orange-500/30 transform hover:-translate-y-0.5 hover:shadow-xl pulse-glow">
+                    Заказать звонок
+                </button>
             </div>
-            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 p-2 hover:bg-slate-100 rounded-lg" onclick="toggleMobileMenu()" aria-label="Меню"><i class="fa-solid fa-bars text-2xl"></i></button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 p-2 hover:bg-slate-100 rounded-lg transition" onclick="toggleMobileMenu()" aria-label="Меню">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
-        <div id="mobile-menu" class="lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-20 shadow-xl overflow-hidden transition-all duration-300 max-h-0">
-            <div class="flex flex-col p-6 space-y-2">
-                <a href="../index.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Главная</a>
-                <a href="uslugi.html" class="text-lg font-medium text-brand-blue bg-blue-50 py-3 px-4 rounded-lg" onclick="toggleMobileMenu()">Услуги</a>
-                <a href="projects.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Проекты</a>
-                <a href="catalog.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Продукты</a>
-                <a href="about.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">О компании</a>
-                <a href="blog.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Блог</a>
-                <a href="contacts.html" class="text-lg font-medium text-slate-700 py-3 px-4 rounded-lg hover:bg-blue-50" onclick="toggleMobileMenu()">Контакты</a>
-                <div class="pt-4 border-t mt-2">
-                    <a href="tel:+79882340095" class="flex items-center gap-3 text-brand-dark font-bold py-3 px-4 bg-brand-orange/10 rounded-lg"><i class="fa-solid fa-phone text-brand-orange"></i><span>+7 (988) 234-00-95</span></a>
-                    <a href="https://wa.me/79882340095" class="flex items-center gap-3 text-green-700 font-bold py-3 px-4 bg-green-50 rounded-lg mt-2"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+
+        <!-- Mobile Nav - Improved -->
+        <div id="mobile-menu" class="lg:hidden bg-gradient-to-b from-white to-slate-50 border-t border-slate-100 absolute w-full left-0 top-20 shadow-2xl overflow-hidden transition-all duration-500 max-h-0">
+            <div class="flex flex-col max-h-[85vh] overflow-y-auto">
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-3 gap-3 p-4 border-b border-slate-100 bg-white">
+                    <a href="tel:+79882340095" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-brand-blue/10 hover:bg-brand-blue/20 transition">
+                        <i class="fa-solid fa-phone text-brand-blue text-xl"></i>
+                        <span class="text-xs font-medium text-brand-blue">Позвонить</span>
+                    </a>
+                    <a href="https://wa.me/79882340095" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-green-500/10 hover:bg-green-500/20 transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
+                        <span class="text-xs font-medium text-green-700">WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/ita_sochi" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-telegram text-blue-600 text-xl"></i>
+                        <span class="text-xs font-medium text-blue-700">Telegram</span>
+                    </a>
+                </div>
+                
+                <!-- Main Menu -->
+                <div class="flex flex-col p-4 space-y-1">
+                    <a href="../index.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-house text-brand-blue"></i>
+                        <span>Главная</span>
+                    </a>
+                    
+                    <!-- Services Accordion -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button onclick="toggleServicesSubmenu()" class="w-full flex items-center justify-between text-lg font-medium text-slate-700 bg-white py-4 px-4 hover:bg-slate-50 transition">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-briefcase text-brand-blue"></i>
+                                <span>Услуги</span>
+                            </div>
+                            <i id="services-arrow" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div id="services-submenu" class="hidden bg-slate-50 border-t border-slate-100">
+                            <a href="uslugi.html#sks" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-server text-xs text-brand-blue"></i>
+                                <span>Монтаж СКС</span>
+                            </a>
+                            <a href="uslugi.html#vols" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-globe text-xs text-brand-blue"></i>
+                                <span>Монтаж ВОЛС</span>
+                            </a>
+                            <a href="video-surveillance.html" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-video text-xs text-brand-blue"></i>
+                                <span>Видеонаблюдение</span>
+                            </a>
+                            <a href="access-control.html" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-id-card text-xs text-brand-blue"></i>
+                                <span>СКУД</span>
+                            </a>
+                            <a href="it-outsourcing.html" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-headset text-xs text-brand-blue"></i>
+                                <span>IT-аутсорсинг</span>
+                            </a>
+                            <a href="uslugi.html#electro" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                                <i class="fa-solid fa-bolt text-xs text-brand-blue"></i>
+                                <span>Электромонтаж</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="projects.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-folder-open text-brand-blue"></i>
+                        <span>Проекты</span>
+                    </a>
+                    <a href="catalog.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-box-open text-brand-blue"></i>
+                        <span>Продукты</span>
+                    </a>
+                    <a href="about.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-circle-info text-brand-blue"></i>
+                        <span>О компании</span>
+                    </a>
+                    <a href="blog.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-newspaper text-brand-blue"></i>
+                        <span>Блог</span>
+                    </a>
+                    <a href="contacts.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-location-dot text-brand-blue"></i>
+                        <span>Контакты</span>
+                    </a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="p-4 border-t border-slate-100 bg-white">
+                    <button onclick="toggleModal('callbackModal'); toggleMobileMenu();" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Заказать звонок</span>
+                    </button>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center gap-4 p-4 border-t border-slate-100 bg-slate-50">
+                    <a href="https://vk.com/ita_sochi" class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center hover:bg-blue-500 hover:text-white transition" aria-label="ВКонтакте" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-vk text-xl"></i>
+                    </a>
+                    <a href="https://t.me/ita_sochi" class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center hover:bg-blue-500 hover:text-white transition" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/79882340095" class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
                 </div>
             </div>
         </div>
