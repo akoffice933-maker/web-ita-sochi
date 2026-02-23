@@ -559,13 +559,19 @@
             <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden animate-scale-in">
                 <!-- Calculator Tabs -->
                 <div class="flex flex-wrap border-b border-slate-200 bg-slate-50">
-                    <button class="calc-tab active px-6 py-4 text-sm font-semibold text-brand-blue border-b-2 border-brand-blue bg-white" data-tab="sks-calc">
+                    <button class="calc-tab active px-4 py-3 md:px-6 md:py-4 text-sm font-semibold text-brand-blue border-b-2 border-brand-blue bg-white" data-tab="sks-calc">
                         <i class="fa-solid fa-server mr-2"></i>СКС
                     </button>
-                    <button class="calc-tab px-6 py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="video-calc">
+                    <button class="calc-tab px-4 py-3 md:px-6 md:py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="vols-calc">
+                        <i class="fa-solid fa-globe mr-2"></i>ВОЛС
+                    </button>
+                    <button class="calc-tab px-4 py-3 md:px-6 md:py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="video-calc">
                         <i class="fa-solid fa-video mr-2"></i>Видеонаблюдение
                     </button>
-                    <button class="calc-tab px-6 py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="it-calc">
+                    <button class="calc-tab px-4 py-3 md:px-6 md:py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="skud-calc">
+                        <i class="fa-solid fa-id-card mr-2"></i>СКУД
+                    </button>
+                    <button class="calc-tab px-4 py-3 md:px-6 md:py-4 text-sm font-semibold text-slate-600 hover:text-brand-blue" data-tab="it-calc">
                         <i class="fa-solid fa-headset mr-2"></i>IT-аутсорсинг
                     </button>
                 </div>
@@ -619,6 +625,60 @@
                         </div>
                     </div>
 
+                    <!-- VOLS Calculator -->
+                    <div id="vols-calc" class="calc-content hidden">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости ВОЛС</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Длина трассы (м)</label>
+                                <input type="number" id="vols-length" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="100" min="1">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Тип кабеля</label>
+                                <select id="vols-cable" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <option value="80">Внутренняя прокладка (+80 ₽/м)</option>
+                                    <option value="150">Канализация (+150 ₽/м)</option>
+                                    <option value="250">Воздушная (+250 ₽/м)</option>
+                                    <option value="400">Бронированный кабель (+400 ₽/м)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Количество волокон</label>
+                                <select id="vols-fibers" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <option value="1">2 волокна</option>
+                                    <option value="1.5">4 волокна</option>
+                                    <option value="2">8 волокон</option>
+                                    <option value="3">16 волокон</option>
+                                    <option value="5">32 волокна</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Дополнительно</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" id="vols-splice" class="w-4 h-4 text-brand-blue">
+                                        <span class="text-sm text-slate-700">Сварка волокон (+300 ₽/волокно)</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" id="vols-otdr" class="w-4 h-4 text-brand-blue">
+                                        <span class="text-sm text-slate-700">Рефлектометрия (+5000 ₽)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
+                                    <p class="text-3xl font-bold" id="vols-total">0 ₽</p>
+                                </div>
+                                <button onclick="calculateVOLS()" class="bg-white text-brand-blue px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition">
+                                    <i class="fa-solid fa-calculator mr-2"></i>Рассчитать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Video Calculator -->
                     <div id="video-calc" class="calc-content hidden">
                         <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости видеонаблюдения</h3>
@@ -664,6 +724,58 @@
                                     <p class="text-3xl font-bold" id="video-total">0 ₽</p>
                                 </div>
                                 <button onclick="calculateVideo()" class="bg-white text-brand-blue px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition">
+                                    <i class="fa-solid fa-calculator mr-2"></i>Рассчитать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SKUD Calculator -->
+                    <div id="skud-calc" class="calc-content hidden">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости СКУД</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Количество точек доступа</label>
+                                <input type="number" id="skud-doors" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="2" min="1">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Тип системы</label>
+                                <select id="skud-type" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <option value="12000">Сетевой контроллер (от 12000 ₽)</option>
+                                    <option value="25000">Биометрия (от 25000 ₽)</option>
+                                    <option value="35000">Турникет (от 35000 ₽)</option>
+                                    <option value="80000">Скоростной турникет (от 80000 ₽)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Способ идентификации</label>
+                                <select id="skud-auth" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <option value="500">Карты RFID (+500 ₽/пользователь)</option>
+                                    <option value="1500">Отпечаток (+1500 ₽/пользователь)</option>
+                                    <option value="3000">Распознавание лица (+3000 ₽/пользователь)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Дополнительно</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" id="skud-time" class="w-4 h-4 text-brand-blue">
+                                        <span class="text-sm text-slate-700">Учёт рабочего времени (+10000 ₽)</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="checkbox" id="skud-1c" class="w-4 h-4 text-brand-blue">
+                                        <span class="text-sm text-slate-700">Интеграция с 1С (+15000 ₽)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
+                                    <p class="text-3xl font-bold" id="skud-total">0 ₽</p>
+                                </div>
+                                <button onclick="calculateSKUD()" class="bg-white text-brand-blue px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition">
                                     <i class="fa-solid fa-calculator mr-2"></i>Рассчитать
                                 </button>
                             </div>

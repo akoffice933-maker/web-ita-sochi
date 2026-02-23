@@ -389,10 +389,81 @@ function calculateIT() {
 // Initialize calculators on page load
 document.addEventListener('DOMContentLoaded', function() {
     calculateSKS();
+    calculateVOLS();
     calculateVideo();
+    calculateSKUD();
     calculateIT();
-    initScrollAnimations();
 });
+
+/**
+ * Calculate VOLS
+ */
+function calculateVOLS() {
+    const volsLength = document.getElementById('vols-length');
+    if (!volsLength) return;
+    
+    const length = parseInt(volsLength.value) || 0;
+    const cablePrice = parseInt(document.getElementById('vols-cable').value) || 0;
+    const fibers = parseFloat(document.getElementById('vols-fibers').value) || 1;
+    const splice = document.getElementById('vols-splice').checked;
+    const otdr = document.getElementById('vols-otdr').checked;
+    
+    // Base installation: 100 RUB/m
+    const basePrice = 100;
+    let total = length * (basePrice + cablePrice);
+    
+    // Fiber multiplier
+    total *= fibers;
+    
+    // Splicing
+    if (splice) {
+        total += length * 0.5 * 300; // Average splice every 0.5m
+    }
+    
+    // OTDR testing
+    if (otdr) {
+        total += 5000;
+    }
+    
+    document.getElementById('vols-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
+    
+    // Track event
+    trackEvent('Calculator', 'Calculate', 'VOLS');
+}
+
+/**
+ * Calculate SKUD
+ */
+function calculateSKUD() {
+    const skudDoors = document.getElementById('skud-doors');
+    if (!skudDoors) return;
+    
+    const doors = parseInt(skudDoors.value) || 0;
+    const type = parseInt(document.getElementById('skud-type').value) || 0;
+    const auth = parseInt(document.getElementById('skud-auth').value) || 0;
+    const time = document.getElementById('skud-time').checked;
+    const integration1c = document.getElementById('skud-1c').checked;
+    
+    let total = doors * type;
+    
+    // Authentication (assume 50 users per door)
+    total += doors * 50 * auth;
+    
+    // Time tracking
+    if (time) {
+        total += 10000;
+    }
+    
+    // 1C integration
+    if (integration1c) {
+        total += 15000;
+    }
+    
+    document.getElementById('skud-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
+    
+    // Track event
+    trackEvent('Calculator', 'Calculate', 'SKUD');
+}
 
 /**
  * Initialize Scroll Animations
