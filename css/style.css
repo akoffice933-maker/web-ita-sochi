@@ -874,3 +874,215 @@ select:focus {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
+
+/* ===================================
+   Enhanced Scroll Animations with Parallax
+   =================================== */
+
+/* Parallax Base */
+.parallax {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Parallax Speed Variants */
+.parallax-slow {
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+
+.parallax-fast {
+    transform: translateY(0);
+    transition: transform 0.15s ease-out;
+}
+
+/* 3D Card Hover Effect */
+.card-3d {
+    perspective: 1000px;
+}
+
+.card-3d-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-3d:hover .card-3d-inner {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Reveal Text Animation */
+@keyframes revealText {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.reveal-text {
+    animation: revealText 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Gradient Border Animation */
+@keyframes gradientBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient-border {
+    background: linear-gradient(90deg, #0066cc, #ff7a00, #0066cc);
+    background-size: 200% 200%;
+    animation: gradientBorder 3s ease infinite;
+}
+
+/* Video Background Optimizations */
+.video-bg {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Fallback for no-video */
+.no-video .video-bg-container {
+    background: linear-gradient(135deg, rgba(0, 48, 135, 0.9) 0%, rgba(0, 102, 204, 0.8) 100%),
+                url('../images/hero-bg.svg') center/cover;
+}
+
+/* Loading State for Video */
+.video-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    z-index: 10;
+}
+
+/* Enhanced Glassmorphism on Hover */
+.glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 102, 204, 0.2);
+}
+
+/* Text Scramble Effect (for dynamic headers) */
+.text-scramble {
+    display: inline-block;
+    position: relative;
+}
+
+/* Morphing Shape Background */
+@keyframes morph {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.morph-shape {
+    animation: morph 8s ease-in-out infinite;
+}
+
+/* Blob Background Animation */
+@keyframes blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+/* Intersection Observer Fade States */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Children Animation */
+.stagger-children > * {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
