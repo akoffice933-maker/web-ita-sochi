@@ -381,19 +381,14 @@
         </div>
     </header>
 
-    <!-- Hero Section with Video Background -->
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
-        <!-- Video Background -->
-        <div class="absolute inset-0 bg-slate-900">
-            <!-- Видео с CDN с fallback на изображение -->
-            <video class="video-bg" autoplay muted loop playsinline poster="images/hero-bg.svg" onerror="this.style.display='none'">
-                <source src="https://cdn.pixabay.com/video/2020/05/25/38894-425373283_large.mp4" type="video/mp4">
-                <source src="https://cdn.pixabay.com/video/2019/04/06/22880-331023992_large.mp4" type="video/mp4">
-            </video>
-            <!-- Тёмный overlay для контраста -->
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-brand-dark/90 to-brand-dark/85"></div>
-            <!-- Pattern overlay -->
-            <div class="absolute inset-0 bg-pattern opacity-15"></div>
+        <!-- Background with Gradient + Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-brand-dark to-brand-blue">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 bg-pattern opacity-10"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
         </div>
         
         <!-- Content -->
