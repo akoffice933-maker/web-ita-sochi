@@ -384,16 +384,16 @@
     <!-- Hero Section with Video Background -->
     <section id="home" class="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
         <!-- Video Background -->
-        <div class="absolute inset-0 bg-brand-dark">
+        <div class="absolute inset-0 bg-slate-900">
             <!-- Видео с CDN с fallback на изображение -->
             <video class="video-bg" autoplay muted loop playsinline poster="images/hero-bg.svg" onerror="this.style.display='none'">
                 <source src="https://cdn.pixabay.com/video/2020/05/25/38894-425373283_large.mp4" type="video/mp4">
                 <source src="https://cdn.pixabay.com/video/2019/04/06/22880-331023992_large.mp4" type="video/mp4">
             </video>
-            <!-- Fallback градиент если видео не загрузилось -->
-            <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark opacity-95"></div>
+            <!-- Тёмный overlay для контраста -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-brand-dark/90 to-brand-dark/85"></div>
             <!-- Pattern overlay -->
-            <div class="absolute inset-0 bg-pattern opacity-10"></div>
+            <div class="absolute inset-0 bg-pattern opacity-15"></div>
         </div>
         
         <!-- Content -->
@@ -407,11 +407,11 @@
 
                 <!-- Hero Title with Large Typography -->
                 <h1 class="text-hero text-white leading-tight mb-6 scroll-reveal scroll-delay-1">
-                    Надёжный системный интегратор в <span class="text-gradient">Сочи</span>
+                    Надёжный системный интегратор в <span class="text-brand-orange">Сочи</span>
                 </h1>
 
                 <!-- Big Lead Text -->
-                <p class="text-lead text-white/90 mb-10 scroll-reveal scroll-delay-2">
+                <p class="text-lead text-white/95 mb-10 scroll-reveal scroll-delay-2">
                     Монтаж СКС · ВОЛС · Видеонаблюдение · СКУД · IT-аутсорсинг · Электромонтаж
                 </p>
 
@@ -427,30 +427,30 @@
                     </a>
                 </div>
 
-                <!-- Glass Cards - Trust Badges -->
+                <!-- Glass Cards - Trust Badges - Enhanced Contrast -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 scroll-reveal scroll-delay-4">
-                    <div class="glass-card rounded-xl p-4 text-center">
+                    <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">60</div>
-                        <div class="text-white/80 text-sm">Месяцев гарантии</div>
+                        <div class="text-white/90 text-sm font-medium">Месяцев гарантии</div>
                     </div>
-                    <div class="glass-card rounded-xl p-4 text-center">
+                    <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">2ч</div>
-                        <div class="text-white/80 text-sm">Выезд на объект</div>
+                        <div class="text-white/90 text-sm font-medium">Выезд на объект</div>
                     </div>
-                    <div class="glass-card rounded-xl p-4 text-center">
+                    <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">15+</div>
-                        <div class="text-white/80 text-sm">Лет опыта</div>
+                        <div class="text-white/90 text-sm font-medium">Лет опыта</div>
                     </div>
-                    <div class="glass-card rounded-xl p-4 text-center">
+                    <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">500+</div>
-                        <div class="text-white/80 text-sm">Проектов</div>
+                        <div class="text-white/90 text-sm font-medium">Проектов</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60 z-10">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/80 z-10">
             <a href="#services" aria-label="Прокрутить вниз" class="glass-button w-12 h-12 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-chevron-down text-xl"></i>
             </a>
