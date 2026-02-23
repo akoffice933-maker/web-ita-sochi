@@ -393,6 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateVideo();
     calculateSKUD();
     calculateIT();
+    calculateElectro();
     initScrollAnimations();
 });
 
@@ -464,6 +465,46 @@ function calculateSKUD() {
     
     // Track event
     trackEvent('Calculator', 'Calculate', 'SKUD');
+}
+
+/**
+ * Calculate Electro
+ */
+function calculateElectro() {
+    const electroType = document.getElementById('electro-type');
+    if (!electroType) return;
+    
+    const type = parseFloat(electroType.value) || 1;
+    const area = parseInt(document.getElementById('electro-area').value) || 0;
+    const sockets = parseInt(document.getElementById('electro-sockets').value) || 0;
+    const light = parseInt(document.getElementById('electro-light').value) || 0;
+    const panel = document.getElementById('electro-panel').checked;
+    const cable = document.getElementById('electro-cable').checked;
+    
+    // Base price per m²: 800 RUB
+    const basePrice = 800;
+    let total = area * basePrice * type;
+    
+    // Sockets: 500 RUB each
+    total += sockets * 500;
+    
+    // Light points: 700 RUB each
+    total += light * 700;
+    
+    // Electrical panel
+    if (panel) {
+        total += 15000;
+    }
+    
+    // Cable replacement: 500 RUB per m (assume 3m per m²)
+    if (cable) {
+        total += area * 3 * 500;
+    }
+    
+    document.getElementById('electro-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
+    
+    // Track event
+    trackEvent('Calculator', 'Calculate', 'Electro');
 }
 
 /**
