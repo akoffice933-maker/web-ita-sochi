@@ -357,7 +357,48 @@
             </form>
         </div>
     </div>
-    <a href="https://wa.me/79882340095" class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp text-3xl"></i></a>
+
+    <!-- Quick Contact Widget -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+        <a href="tel:+79882340095" class="group flex items-center gap-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue px-4 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 opacity-0 translate-x-8 hidden-widget" aria-label="Позвонить">
+            <i class="fa-solid fa-phone text-lg"></i>
+            <span class="text-sm whitespace-nowrap">+7 (988) 234-00-95</span>
+        </a>
+        <a href="https://t.me/ita_sochi" class="group flex items-center gap-2 bg-white hover:bg-[#0088cc] hover:text-white text-[#0088cc] px-4 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 opacity-0 translate-x-8 hidden-widget" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-telegram text-lg"></i>
+            <span class="text-sm whitespace-nowrap">Telegram</span>
+        </a>
+        <button onclick="toggleContactWidget()" class="relative bg-[#25D366] hover:bg-[#20bd5a] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 hover:scale-110 pulse-glow z-50" aria-label="Связаться с нами">
+            <i class="fa-brands fa-whatsapp text-4xl"></i>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping"></span>
+        </button>
+    </div>
+
     <script src="../js/main.js"></script>
+    <script>
+        function toggleContactWidget() {
+            const buttons = document.querySelectorAll('.hidden-widget');
+            const isOpen = buttons[0].classList.contains('opacity-100');
+            buttons.forEach((btn, index) => {
+                if (isOpen) {
+                    btn.classList.remove('opacity-100', 'translate-x-0');
+                    btn.classList.add('opacity-0', 'translate-x-8');
+                } else {
+                    setTimeout(() => {
+                        btn.classList.remove('hidden');
+                        btn.classList.remove('opacity-0', 'translate-x-8');
+                        btn.classList.add('opacity-100', 'translate-x-0');
+                    }, index * 100);
+                }
+            });
+        }
+        document.addEventListener('click', function(event) {
+            const widget = event.target.closest('.fixed.bottom-6.right-6');
+            const buttons = document.querySelectorAll('.hidden-widget');
+            if (!widget && buttons[0].classList.contains('opacity-100')) {
+                toggleContactWidget();
+            }
+        });
+    </script>
 </body>
 </html>

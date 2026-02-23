@@ -260,3 +260,58 @@ img[loading="lazy"] {
     background-color: #0066cc;
     color: #ffffff;
 }
+
+/* Calculator Styles */
+.calc-tab {
+    transition: all 0.3s ease;
+}
+
+.calc-tab.active {
+    border-bottom-width: 3px;
+}
+
+.calc-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Widget Styles */
+.hidden-widget {
+    display: flex;
+}
+
+/* Calculator Input Focus */
+input:focus,
+select:focus {
+    ring: 2px;
+    ring-color: #0066cc;
+}
+
+/* Calculator Result Animation */
+#sks-total,
+#video-total,
+#it-total {
+    transition: all 0.3s ease;
+}
+
+/* Responsive Calculator */
+@media (max-width: 768px) {
+    .calc-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .calc-tab i {
+        display: none;
+    }
+}
