@@ -25,16 +25,33 @@ function toggleMobileMenu() {
 
     if (menu.classList.contains('max-h-0')) {
         menu.classList.remove('max-h-0');
-        menu.classList.add('max-h-[700px]');
+        menu.classList.add('max-h-[85vh]');
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-xmark');
         document.body.style.overflow = 'hidden';
     } else {
         menu.classList.add('max-h-0');
-        menu.classList.remove('max-h-[700px]');
+        menu.classList.remove('max-h-[85vh]');
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
         document.body.style.overflow = 'auto';
+    }
+}
+
+/**
+ * Toggle Services Submenu
+ */
+function toggleServicesSubmenu() {
+    const submenu = document.getElementById('services-submenu');
+    const arrow = document.getElementById('services-arrow');
+    if (!submenu || !arrow) return;
+    
+    if (submenu.classList.contains('hidden')) {
+        submenu.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+    } else {
+        submenu.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
     }
 }
 
