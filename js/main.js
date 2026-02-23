@@ -382,7 +382,32 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateSKS();
     calculateVideo();
     calculateIT();
+    initScrollAnimations();
 });
+
+/**
+ * Initialize Scroll Animations
+ */
+function initScrollAnimations() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all scroll reveal elements
+    document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-blur').forEach(function(el) {
+        observer.observe(el);
+    });
+}
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');

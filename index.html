@@ -381,53 +381,64 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-[90vh] flex items-center hero-bg pt-20">
-        <div class="absolute inset-0 bg-pattern opacity-100"></div>
-
-        <div class="container mx-auto px-4 relative z-10 py-12">
-            <div class="max-w-5xl">
-                <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-full px-5 py-2.5 mb-8 animate-fade-in-up">
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="video-bg-container min-h-[95vh] flex items-center pt-20">
+        <!-- Video Background -->
+        <video class="video-bg" autoplay muted loop playsinline poster="images/hero-bg.svg">
+            <source src="https://cdn.coverr.co/videos/coverr-server-room-3840x2160-12345/1080p.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Gradient Overlay -->
+        <div class="video-bg-overlay"></div>
+        
+        <!-- Content -->
+        <div class="video-bg-content container mx-auto px-4 relative z-10 py-12">
+            <div class="max-w-6xl">
+                <!-- Glass Badge -->
+                <div class="glass-badge inline-flex items-center gap-2 px-5 py-2.5 mb-8 scroll-reveal">
                     <span class="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></span>
                     <span class="text-white font-medium text-sm">Работаем в Сочи и Краснодарском крае</span>
                 </div>
 
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
-                    Надёжный системный интегратор в <span class="text-brand-orange">Сочи</span>
+                <!-- Hero Title with Large Typography -->
+                <h1 class="text-hero text-white leading-tight mb-6 scroll-reveal scroll-delay-1">
+                    Надёжный системный интегратор в <span class="text-gradient">Сочи</span>
                 </h1>
 
-                <p class="text-lg md:text-xl text-white/95 mb-10 font-light max-w-3xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s">
+                <!-- Big Lead Text -->
+                <p class="text-lead text-white/90 mb-10 scroll-reveal scroll-delay-2">
                     Монтаж СКС · ВОЛС · Видеонаблюдение · СКУД · IT-аутсорсинг · Электромонтаж
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up" style="animation-delay: 0.3s">
-                    <a href="#contact-form" class="bg-brand-blue hover:bg-blue-700 text-white text-lg px-10 py-5 rounded-2xl font-bold transition shadow-lg shadow-blue-500/40 transform hover:-translate-y-1 hover:shadow-xl text-center">
-                        <i class="fa-solid fa-calculator mr-2"></i>
-                        Подобрать решение
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-12 scroll-reveal scroll-delay-3">
+                    <a href="#contact-form" class="btn-cta glow inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-blue-700 text-white text-lg px-10 py-5 rounded-2xl font-bold shadow-lg shadow-blue-500/40">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Подобрать решение</span>
                     </a>
-                    <a href="tel:+79882340095" class="bg-brand-orange hover:bg-brand-orangeHover text-white text-lg px-10 py-5 rounded-2xl font-bold transition shadow-lg shadow-orange-500/40 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2 pulse-glow">
+                    <a href="tel:+79882340095" class="btn-cta pulse-scale inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white text-lg px-10 py-5 rounded-2xl font-bold shadow-lg shadow-orange-500/40">
                         <i class="fa-solid fa-phone"></i>
-                        Позвонить +7 (988) 234-00-95
+                        <span>Позвонить +7 (988) 234-00-95</span>
                     </a>
                 </div>
 
-                <!-- Trust Badges -->
-                <div class="flex flex-wrap gap-3 text-white/90 text-sm font-medium">
-                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
-                        <i class="fa-solid fa-shield-halved text-brand-orange"></i>
-                        <span>Гарантия до 60 мес.</span>
+                <!-- Glass Cards - Trust Badges -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 scroll-reveal scroll-delay-4">
+                    <div class="glass-card rounded-xl p-4 text-center">
+                        <div class="text-3xl font-bold text-brand-orange mb-1">60</div>
+                        <div class="text-white/80 text-sm">Месяцев гарантии</div>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
-                        <i class="fa-solid fa-clock text-brand-orange"></i>
-                        <span>Выезд за 2 часа</span>
+                    <div class="glass-card rounded-xl p-4 text-center">
+                        <div class="text-3xl font-bold text-brand-orange mb-1">2ч</div>
+                        <div class="text-white/80 text-sm">Выезд на объект</div>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
-                        <i class="fa-solid fa-certificate text-brand-orange"></i>
-                        <span>Лицензии МЧС</span>
+                    <div class="glass-card rounded-xl p-4 text-center">
+                        <div class="text-3xl font-bold text-brand-orange mb-1">15+</div>
+                        <div class="text-white/80 text-sm">Лет опыта</div>
                     </div>
-                    <div class="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg">
-                        <i class="fa-solid fa-users text-brand-orange"></i>
-                        <span>Опыт 15+ лет</span>
+                    <div class="glass-card rounded-xl p-4 text-center">
+                        <div class="text-3xl font-bold text-brand-orange mb-1">500+</div>
+                        <div class="text-white/80 text-sm">Проектов</div>
                     </div>
                 </div>
             </div>
@@ -435,8 +446,8 @@
 
         <!-- Scroll Down Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60">
-            <a href="#services" aria-label="Прокрутить вниз">
-                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            <a href="#services" aria-label="Прокрутить вниз" class="glass-button w-12 h-12 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-chevron-down text-xl"></i>
             </a>
         </div>
     </section>
@@ -913,40 +924,100 @@
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="about" class="py-24 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-        
+    <!-- Why Us Section - Card Blocks -->
+    <section id="about" class="py-24 bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 animate-pulse" style="animation-delay: 1s;"></div>
+
         <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-brand-orange font-semibold text-sm uppercase tracking-wider mb-3 block">Преимущества</span>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">Почему Выбирают ИТА</h2>
-                <div class="w-24 h-1.5 bg-brand-orange mx-auto rounded-full"></div>
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="glass-badge inline-block px-6 py-2 mb-4">
+                    <span class="text-brand-orange font-semibold text-sm uppercase tracking-wider">Преимущества</span>
+                </span>
+                <h2 class="text-section-title mb-6">Почему Выбирают ИТА</h2>
+                <div class="w-32 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div class="text-center p-6">
-                    <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-orange text-3xl">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Локальная команда</h3>
-                    <p class="text-slate-400 text-sm">Офис и склад в Сочи</p>
+            <!-- Stats Cards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="stat-card scroll-reveal scroll-delay-1">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Лет опыта</div>
                 </div>
-                <div class="text-center p-6">
-                    <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-orange text-3xl">
-                        <i class="fa-solid fa-calendar-check"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Опыт 15+ лет</h3>
-                    <p class="text-slate-400 text-sm">500+ проектов</p>
+                <div class="stat-card scroll-reveal scroll-delay-2">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Проектов</div>
                 </div>
-                <div class="text-center p-6">
-                    <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-orange text-3xl">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Сертификаты</h3>
-                    <p class="text-slate-400 text-sm">Специалисты с допусками</p>
+                <div class="stat-card scroll-reveal scroll-delay-3">
+                    <div class="stat-number">60</div>
+                    <div class="stat-label">Месяцев гарантии</div>
                 </div>
+                <div class="stat-card scroll-reveal scroll-delay-4">
+                    <div class="stat-number">2ч</div>
+                    <div class="stat-label">Выезд на объект</div>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="feature-card scroll-reveal scroll-delay-1">
+                    <div class="step-number">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Локальная команда</h3>
+                    <p class="text-slate-600">Офис и склад в Сочи. Быстрый выезд на объект в течение 2 часов.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card scroll-reveal scroll-delay-2">
+                    <div class="step-number">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Сертификаты и допуски</h3>
+                    <p class="text-slate-600">Специалисты с действующими допусками и сертификатами производителей.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card scroll-reveal scroll-delay-3">
+                    <div class="step-number">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Гарантия до 60 месяцев</h3>
+                    <p class="text-slate-600">Расширенная гарантия на все виды работ. Соблюдение сроков.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card scroll-reveal scroll-delay-4">
+                    <div class="step-number">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Собственный склад</h3>
+                    <p class="text-slate-600">Оборудование в наличии. Оперативные поставки под проект.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card scroll-reveal scroll-delay-5">
+                    <div class="step-number">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Лицензии МЧС</h3>
+                    <p class="text-slate-600">Все необходимые лицензии и допуски СРО для любых объектов.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card scroll-reveal scroll-delay-1">
+                    <div class="step-number">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Поддержка 24/7</h3>
+                    <p class="text-slate-600">Круглосуточная техническая поддержка и аварийный выезд.</p>
+                </div>
+            </div>
+        </div>
+    </section>
                 <div class="text-center p-6">
                     <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 text-brand-orange text-3xl">
                         <i class="fa-solid fa-shield-heart"></i>
