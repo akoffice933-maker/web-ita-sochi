@@ -279,29 +279,32 @@ document.querySelectorAll('.calc-tab').forEach(function(tab) {
  * Calculate SKS
  */
 function calculateSKS() {
-    const ports = parseInt(document.getElementById('sks-ports').value) || 0;
+    const sksPorts = document.getElementById('sks-ports');
+    if (!sksPorts) return; // Exit if calculator not on page
+    
+    const ports = parseInt(sksPorts.value) || 0;
     const cablePrice = parseInt(document.getElementById('sks-cable').value) || 0;
     const length = parseInt(document.getElementById('sks-length').value) || 0;
     const cert = document.getElementById('sks-cert').checked;
     const rack = document.getElementById('sks-rack').checked;
-    
+
     // Base price per port: 450 RUB
     const basePrice = 450;
     let total = ports * basePrice;
-    
+
     // Cable price
     total += length * cablePrice;
-    
+
     // Certification
     if (cert) {
         total += ports * 500;
     }
-    
+
     // Rack
     if (rack) {
         total += 5000;
     }
-    
+
     document.getElementById('sks-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
     
     // Track event
@@ -312,31 +315,34 @@ function calculateSKS() {
  * Calculate Video Surveillance
  */
 function calculateVideo() {
-    const cams = parseInt(document.getElementById('video-cams').value) || 0;
+    const videoCams = document.getElementById('video-cams');
+    if (!videoCams) return; // Exit if calculator not on page
+    
+    const cams = parseInt(videoCams.value) || 0;
     const camType = parseInt(document.getElementById('video-type').value) || 0;
     const dvr = parseInt(document.getElementById('video-dvr').value) || 0;
     const hdd = document.getElementById('video-hdd').checked;
     const monitor = document.getElementById('video-monitor').checked;
-    
+
     // Installation per camera: 3500 RUB
     const installPrice = 3500;
     let total = cams * (installPrice + camType);
-    
+
     // DVR
     total += dvr;
-    
+
     // HDD
     if (hdd) {
         total += 4000;
     }
-    
+
     // Monitor
     if (monitor) {
         total += 8000;
     }
-    
+
     document.getElementById('video-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
-    
+
     // Track event
     trackEvent('Calculator', 'Calculate', 'Video');
 }
@@ -345,34 +351,37 @@ function calculateVideo() {
  * Calculate IT Outsourcing
  */
 function calculateIT() {
-    const workplaces = parseInt(document.getElementById('it-workplaces').value) || 0;
+    const itWorkplaces = document.getElementById('it-workplaces');
+    if (!itWorkplaces) return; // Exit if calculator not on page
+    
+    const workplaces = parseInt(itWorkplaces.value) || 0;
     const servers = parseInt(document.getElementById('it-servers').value) || 0;
     const type = parseInt(document.getElementById('it-type').value) || 0;
     const backup = document.getElementById('it-backup').checked;
     const security = document.getElementById('it-security').checked;
-    
+
     let total = type;
-    
+
     // Additional workplaces (first 10 included in base price)
     if (workplaces > 10) {
         total += (workplaces - 10) * 500;
     }
-    
+
     // Servers
     total += servers * 3000;
-    
+
     // Backup
     if (backup) {
         total += 5000;
     }
-    
+
     // Security
     if (security) {
         total += 3000;
     }
-    
+
     document.getElementById('it-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
-    
+
     // Track event
     trackEvent('Calculator', 'Calculate', 'IT');
 }
