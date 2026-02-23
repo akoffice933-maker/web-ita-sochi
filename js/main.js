@@ -393,6 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateVideo();
     calculateSKUD();
     calculateIT();
+    initScrollAnimations();
 });
 
 /**
