@@ -1186,60 +1186,81 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-24 bg-brand-light">
+    <!-- Testimonials Carousel -->
+    <section class="py-24 bg-brand-light overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-3 block">Отзывы</span>
                 <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Что Говорят Клиенты</h2>
                 <div class="w-24 h-1.5 bg-brand-orange mx-auto rounded-full"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="flex text-yellow-400 mb-4 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+            <!-- Carousel Container -->
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Carousel Track -->
+                <div class="testimonial-carousel flex overflow-hidden gap-8">
+                    <!-- Review 1 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.75rem)] transition-all duration-500">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full">
+                            <div class="flex text-yellow-400 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 italic mb-6 leading-relaxed">"Сотрудничаем с ИТА уже 5 лет по обслуживанию офиса. Ребята всегда на связи, проблемы решают быстро. Цены адекватные для Сочи."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">А</div>
+                                <div>
+                                    <p class="font-bold text-brand-dark">Алексей Петров</p>
+                                    <p class="text-xs text-slate-500">Директор ООО "СтройТех"</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Сотрудничаем с ИТА уже 5 лет по обслуживанию офиса. Ребята всегда на связи, проблемы решают быстро. Цены адекватные для Сочи."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">А</div>
-                        <div>
-                            <p class="font-bold text-brand-dark">Алексей Петров</p>
-                            <p class="text-xs text-slate-500">Директор ООО "СтройТех"</p>
+
+                    <!-- Review 2 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.75rem)] transition-all duration-500">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full">
+                            <div class="flex text-yellow-400 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 italic mb-6 leading-relaxed">"Заказывали видеонаблюдение для отеля. Сделали проект, помогли с выбором камер, установили и настроили удаленный доступ. Все четко."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">М</div>
+                                <div>
+                                    <p class="font-bold text-brand-dark">Мария Иванова</p>
+                                    <p class="text-xs text-slate-500">Управляющая отелем</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.75rem)] transition-all duration-500">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full">
+                            <div class="flex text-yellow-400 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 italic mb-6 leading-relaxed">"Профессиональный монтаж СКС в новом бизнес-центре. Протоколы тестирования Fluke предоставили в срок. Рекомендую."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">Д</div>
+                                <div>
+                                    <p class="font-bold text-brand-dark">Дмитрий Соколов</p>
+                                    <p class="text-xs text-slate-500">Главный инженер БЦ "Панорама"</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Review 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="flex text-yellow-400 mb-4 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Заказывали видеонаблюдение для отеля. Сделали проект, помогли с выбором камер, установили и настроили удаленный доступ. Все четко."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">М</div>
-                        <div>
-                            <p class="font-bold text-brand-dark">Мария Иванова</p>
-                            <p class="text-xs text-slate-500">Управляющая отелем</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Navigation Buttons -->
+                <button class="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white transition z-10" aria-label="Предыдущий">
+                    <i class="fa-solid fa-arrow-left text-xl"></i>
+                </button>
+                <button class="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white transition z-10" aria-label="Следующий">
+                    <i class="fa-solid fa-arrow-right text-xl"></i>
+                </button>
 
-                <!-- Review 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="flex text-yellow-400 mb-4 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Профессиональный монтаж СКС в новом бизнес-центре. Протоколы тестирования Fluke предоставили в срок. Рекомендую."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center font-bold text-brand-blue">Д</div>
-                        <div>
-                            <p class="font-bold text-brand-dark">Дмитрий Соколов</p>
-                            <p class="text-xs text-slate-500">Главный инженер БЦ "Панорама"</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Dots Indicator -->
+                <div class="testimonial-dots flex justify-center gap-2 mt-8"></div>
             </div>
         </div>
     </section>
