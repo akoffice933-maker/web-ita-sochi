@@ -395,7 +395,6 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateIT();
     calculateElectro();
     initScrollAnimations();
-    initTestimonialsCarousel();
 });
 
 /**
@@ -506,86 +505,6 @@ function calculateElectro() {
     
     // Track event
     trackEvent('Calculator', 'Calculate', 'Electro');
-}
-
-/**
- * Initialize Testimonials Carousel
- */
-function initTestimonialsCarousel() {
-    const carousel = document.querySelector('.testimonial-carousel');
-    const prevBtn = document.querySelector('.testimonial-prev');
-    const nextBtn = document.querySelector('.testimonial-next');
-    const dotsContainer = document.querySelector('.testimonial-dots');
-    
-    if (!carousel || !prevBtn || !nextBtn || !dotsContainer) return;
-    
-    const slides = carousel.querySelectorAll('.testimonial-slide');
-    let currentIndex = 0;
-    let autoPlayInterval;
-    
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.className = `w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-brand-blue w-8' : 'bg-slate-300'}`;
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-    
-    const dots = dotsContainer.querySelectorAll('button');
-    
-    function updateDots() {
-        dots.forEach((dot, index) => {
-            dot.className = `w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-brand-blue w-8' : 'bg-slate-300'}`;
-        });
-    }
-    
-    function goToSlide(index) {
-        currentIndex = index;
-        const slideWidth = slides[0].getBoundingClientRect().width + 32; // 32 = gap
-        carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        updateDots();
-    }
-    
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-    }
-    
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(currentIndex);
-    }
-    
-    // Event listeners
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoPlay();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoPlay();
-    });
-    
-    // Auto play
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 5000);
-    }
-    
-    function resetAutoPlay() {
-        clearInterval(autoPlayInterval);
-        startAutoPlay();
-    }
-    
-    // Pause on hover
-    carousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-    carousel.addEventListener('mouseleave', startAutoPlay);
-    
-    // Handle resize
-    window.addEventListener('resize', () => goToSlide(currentIndex));
-    
-    // Start
-    startAutoPlay();
 }
 
 /**
