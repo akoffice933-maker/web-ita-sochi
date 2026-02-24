@@ -917,15 +917,15 @@
             </div>
         </div>
 
-        <!-- Scroll Container -->
-        <div class="projects-slider flex overflow-x-auto gap-6 px-4 pb-8 no-scrollbar snap-x snap-mandatory">
+        <!-- Scroll Container with Smooth Scroll -->
+        <div class="projects-slider flex overflow-x-auto gap-6 px-4 pb-8 snap-x snap-mandatory scroll-smooth" style="scroll-behavior: smooth;">
             <!-- Project 1: FIFA 2018 -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="FIFA 2018 Стадион Фишт Сочи" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2018</span>
                     <h3 class="text-white text-2xl font-bold mb-3">FIFA 2018, стадион «Фишт»</h3>
-                    
+
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-2 gap-3 mb-4">
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
@@ -945,7 +945,7 @@
                             <div class="text-xs text-white/80">Месяцев гарантии</div>
                         </div>
                     </div>
-                    
+
                     <div class="flex items-center gap-2 text-white/90 text-sm">
                         <span class="font-semibold">СКС • ВОЛС • Wi-Fi</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
@@ -953,76 +953,8 @@
                 </div>
             </a>
 
-            <!-- Project 2: Sochivodokanal -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Сочиводоканал промышленность автоматизация" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
-                    <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Промышленность</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Сочиводоканал</h3>
-
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">50+</div>
-                            <div class="text-xs text-white/80">Объектов</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">Profibus</div>
-                            <div class="text-xs text-white/80">Промсеть</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">SCADA</div>
-                            <div class="text-xs text-white/80">Диспетчеризация</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">30%</div>
-                            <div class="text-xs text-white/80">Экономия</div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
-                        <span class="font-semibold">Автоматизация • SCADA • Мониторинг</span>
-                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Project 3: Gorki Gorod -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Горки Город курорт Сочи видеонаблюдение" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
-                    <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">ЖКХ • 2016</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Горки Город</h3>
-
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">250</div>
-                            <div class="text-xs text-white/80">IP-камер</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">120</div>
-                            <div class="text-xs text-white/80">Точек СКУД</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">500+</div>
-                            <div class="text-xs text-white/80">Точек Wi-Fi</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">99.9%</div>
-                            <div class="text-xs text-white/80">Uptime</div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
-                        <span class="font-semibold">Видеонаблюдение • СКУД • Wi-Fi</span>
-                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Project 4: Olympics 2014 -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0">
+            <!-- Project 2: Olympics 2014 -->
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=800&h=600&fit=crop" alt="Олимпиада 2014 Сочи Красная Поляна" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2014</span>
@@ -1055,13 +987,81 @@
                 </div>
             </a>
 
+            <!-- Project 3: Gorki Gorod -->
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Горки Город курорт Сочи видеонаблюдение" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                    <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">ЖКХ • 2016</span>
+                    <h3 class="text-white text-2xl font-bold mb-3">Горки Город</h3>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">250</div>
+                            <div class="text-xs text-white/80">IP-камер</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">120</div>
+                            <div class="text-xs text-white/80">Точек СКУД</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">500+</div>
+                            <div class="text-xs text-white/80">Точек Wi-Fi</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">99.9%</div>
+                            <div class="text-xs text-white/80">Uptime</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                        <span class="font-semibold">Видеонаблюдение • СКУД • Wi-Fi</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4: Sochivodokanal -->
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Сочиводоканал промышленность автоматизация" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                    <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Промышленность</span>
+                    <h3 class="text-white text-2xl font-bold mb-3">Сочиводоканал</h3>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">50+</div>
+                            <div class="text-xs text-white/80">Объектов</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">Profibus</div>
+                            <div class="text-xs text-white/80">Промсеть</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">SCADA</div>
+                            <div class="text-xs text-white/80">Диспетчеризация</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                            <div class="text-2xl font-bold text-brand-orange">30%</div>
+                            <div class="text-xs text-white/80">Экономия</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                        <span class="font-semibold">Автоматизация • SCADA • Мониторинг</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
+                    </div>
+                </div>
+            </a>
+
             <!-- Project 5: Hotel 5* -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Отель 5 звезд Сочи IT инфраструктура" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Гостиницы</span>
                     <h3 class="text-white text-2xl font-bold mb-3">Отель 5*</h3>
-                    
+
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-2 gap-3 mb-4">
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
@@ -1081,7 +1081,7 @@
                             <div class="text-xs text-white/80">Интернет</div>
                         </div>
                     </div>
-                    
+
                     <div class="flex items-center gap-2 text-white/90 text-sm">
                         <span class="font-semibold">Видеонаблюдение • СКУД • PMS • Wi-Fi</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
