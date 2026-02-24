@@ -219,10 +219,10 @@
     <header class="fixed w-full top-0 z-50 bg-white shadow-lg border-b border-slate-200 transition-all duration-300" id="main-header">
         <div class="container mx-auto px-4 h-20 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
+            <a href="index.html" class="flex items-center gap-2 md:p-3 group">
                 <img src="images/logo.jpg" alt="ИТА Сочи логотип" class="w-14 h-14 object-contain">
                 <div class="flex flex-col">
-                    <span class="text-2xl font-bold text-brand-dark leading-none">ИТА</span>
+                    <span class="text-lg md:text-2xl font-bold text-brand-dark leading-none">ИТА</span>
                     <span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span>
                 </div>
             </a>
@@ -276,16 +276,16 @@
         <div id="mobile-menu" class="lg:hidden bg-gradient-to-b from-white to-slate-50 border-t border-slate-100 absolute w-full left-0 top-20 shadow-2xl overflow-hidden transition-all duration-500 max-h-0">
             <div class="flex flex-col max-h-[85vh] overflow-y-auto">
                 <!-- Quick Actions -->
-                <div class="grid grid-cols-3 gap-3 p-4 border-b border-slate-100 bg-white">
-                    <a href="tel:+79882340095" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-brand-blue/10 hover:bg-brand-blue/20 transition">
+                <div class="grid grid-cols-3 gap-2 md:p-3 p-4 border-b border-slate-100 bg-white">
+                    <a href="tel:+79882340095" class="flex flex-col items-center gap-2 p-2 md:p-3 rounded-xl bg-brand-blue/10 hover:bg-brand-blue/20 transition">
                         <i class="fa-solid fa-phone text-brand-blue text-xl"></i>
                         <span class="text-xs font-medium text-brand-blue">Позвонить</span>
                     </a>
-                    <a href="https://wa.me/79882340095" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-green-500/10 hover:bg-green-500/20 transition" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/79882340095" class="flex flex-col items-center gap-2 p-2 md:p-3 rounded-xl bg-green-500/10 hover:bg-green-500/20 transition" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
                         <span class="text-xs font-medium text-green-700">WhatsApp</span>
                     </a>
-                    <a href="https://t.me/ita_sochi" class="flex flex-col items-center gap-2 p-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 transition" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/ita_sochi" class="flex flex-col items-center gap-2 p-2 md:p-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 transition" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-telegram text-blue-600 text-xl"></i>
                         <span class="text-xs font-medium text-blue-700">Telegram</span>
                     </a>
@@ -293,7 +293,7 @@
                 
                 <!-- Main Menu -->
                 <div class="flex flex-col p-4 space-y-1">
-                    <a href="index.html" class="flex items-center gap-3 text-lg font-medium text-brand-blue bg-blue-50 py-4 px-4 rounded-xl" onclick="toggleMobileMenu()">
+                    <a href="index.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-brand-blue bg-blue-50 py-4 px-4 rounded-xl" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-house text-brand-blue"></i>
                         <span>Главная</span>
                     </a>
@@ -301,57 +301,57 @@
                     <!-- Services Accordion -->
                     <div class="border border-slate-200 rounded-xl overflow-hidden">
                         <button onclick="toggleServicesSubmenu()" class="w-full flex items-center justify-between text-lg font-medium text-slate-700 bg-white py-4 px-4 hover:bg-slate-50 transition">
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-2 md:p-3">
                                 <i class="fa-solid fa-briefcase text-brand-blue"></i>
                                 <span>Услуги</span>
                             </div>
                             <i id="services-arrow" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div id="services-submenu" class="hidden bg-slate-50 border-t border-slate-100">
-                            <a href="pages/uslugi.html#sks" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                            <a href="pages/uslugi.html#sks" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                                 <i class="fa-solid fa-server text-xs text-brand-blue"></i>
                                 <span>Монтаж СКС</span>
                             </a>
-                            <a href="pages/uslugi.html#vols" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                            <a href="pages/uslugi.html#vols" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                                 <i class="fa-solid fa-globe text-xs text-brand-blue"></i>
                                 <span>Монтаж ВОЛС</span>
                             </a>
-                            <a href="pages/video-surveillance.html" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="setTimeout(() => toggleMobileMenu(), 150)">
+                            <a href="pages/video-surveillance.html" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="setTimeout(() => toggleMobileMenu(), 150)">
                                 <i class="fa-solid fa-video text-xs text-brand-blue"></i>
                                 <span>Видеонаблюдение</span>
                             </a>
-                            <a href="pages/uslugi.html#skud" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                            <a href="pages/uslugi.html#skud" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                                 <i class="fa-solid fa-id-card text-xs text-brand-blue"></i>
                                 <span>СКУД</span>
                             </a>
-                            <a href="pages/uslugi.html#it" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                            <a href="pages/uslugi.html#it" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                                 <i class="fa-solid fa-headset text-xs text-brand-blue"></i>
                                 <span>IT-аутсорсинг</span>
                             </a>
-                            <a href="pages/uslugi.html#electro" class="flex items-center gap-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                            <a href="pages/uslugi.html#electro" class="flex items-center gap-2 md:p-3 text-base text-slate-600 py-3 px-4 hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                                 <i class="fa-solid fa-bolt text-xs text-brand-blue"></i>
                                 <span>Электромонтаж</span>
                             </a>
                         </div>
                     </div>
                     
-                    <a href="pages/projects.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                    <a href="pages/projects.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-folder-open text-brand-blue"></i>
                         <span>Проекты</span>
                     </a>
-                    <a href="pages/catalog.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                    <a href="pages/catalog.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-box-open text-brand-blue"></i>
                         <span>Продукты</span>
                     </a>
-                    <a href="pages/about.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                    <a href="pages/about.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-circle-info text-brand-blue"></i>
                         <span>О компании</span>
                     </a>
-                    <a href="pages/blog.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                    <a href="pages/blog.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-newspaper text-brand-blue"></i>
                         <span>Блог</span>
                     </a>
-                    <a href="pages/contacts.html" class="flex items-center gap-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
+                    <a href="pages/contacts.html" class="flex items-center gap-2 md:p-3 text-lg font-medium text-slate-700 bg-white py-4 px-4 rounded-xl hover:bg-blue-50 hover:text-brand-blue transition" onclick="toggleMobileMenu()">
                         <i class="fa-solid fa-location-dot text-brand-blue"></i>
                         <span>Контакты</span>
                     </a>
@@ -426,19 +426,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up" style="animation-delay: 0.4s">
                     <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">60</div>
-                        <div class="text-white/90 text-sm font-medium">Месяцев гарантии</div>
+                        <div class="text-white/90 text-xs md:text-sm font-medium">Месяцев гарантии</div>
                     </div>
                     <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">2ч</div>
-                        <div class="text-white/90 text-sm font-medium">Выезд на объект</div>
+                        <div class="text-white/90 text-xs md:text-sm font-medium">Выезд на объект</div>
                     </div>
                     <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">15+</div>
-                        <div class="text-white/90 text-sm font-medium">Лет опыта</div>
+                        <div class="text-white/90 text-xs md:text-sm font-medium">Лет опыта</div>
                     </div>
                     <div class="glass-card-dark rounded-xl p-4 text-center border border-white/20">
                         <div class="text-3xl font-bold text-brand-orange mb-1">500+</div>
-                        <div class="text-white/90 text-sm font-medium">Проектов</div>
+                        <div class="text-white/90 text-xs md:text-sm font-medium">Проектов</div>
                     </div>
                 </div>
             </div>
@@ -470,7 +470,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-server"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Проектирование и монтаж структурированных кабельных систем. Сертификация Fluke.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 450 ₽ / точка</span>
@@ -483,7 +483,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-globe"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Прокладка оптоволокна, сварка, тестирование рефлектометром. Линии любой длины.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По проекту</span>
@@ -496,7 +496,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-video"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">IP и аналоговые системы. Удаленный доступ. Аналитика и распознавание лиц.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 3 500 ₽ / камера</span>
@@ -509,7 +509,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-id-card"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">СКУД</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">СКУД</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Турникеты, шлагбаумы, биометрия, учет рабочего времени. Интеграция с 1С.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По запросу</span>
@@ -522,7 +522,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-headset"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Абонентское обслуживание офисов. Администрирование серверов, защита данных.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">от 15 000 ₽ / мес</span>
@@ -535,7 +535,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
+                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
                     <p class="text-slate-600 mb-6 text-sm leading-relaxed">Монтаж щитового оборудования, освещение, розеточные группы. Допуски.</p>
                     <div class="flex justify-between items-center border-t border-slate-100 pt-4">
                         <span class="text-sm font-semibold text-brand-orange">По смете</span>
@@ -582,8 +582,8 @@
                 <div class="p-8">
                     <!-- SКС Calculator -->
                     <div id="sks-calc" class="calc-content active">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости СКС</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости СКС</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Количество информационных розеток</label>
                                 <input type="number" id="sks-ports" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="10" min="1">
@@ -615,7 +615,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
@@ -630,8 +630,8 @@
 
                     <!-- VOLS Calculator -->
                     <div id="vols-calc" class="calc-content hidden">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости ВОЛС</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости ВОЛС</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Длина трассы (м)</label>
                                 <input type="number" id="vols-length" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="100" min="1">
@@ -669,7 +669,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
@@ -684,8 +684,8 @@
 
                     <!-- Video Calculator -->
                     <div id="video-calc" class="calc-content hidden">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости видеонаблюдения</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости видеонаблюдения</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Количество камер</label>
                                 <input type="number" id="video-cams" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="4" min="1">
@@ -720,7 +720,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
@@ -735,8 +735,8 @@
 
                     <!-- SKUD Calculator -->
                     <div id="skud-calc" class="calc-content hidden">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости СКУД</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости СКУД</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Количество точек доступа</label>
                                 <input type="number" id="skud-doors" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="2" min="1">
@@ -772,7 +772,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
@@ -787,8 +787,8 @@
 
                     <!-- IT Calculator -->
                     <div id="it-calc" class="calc-content hidden">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости IT-аутсорсинга</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости IT-аутсорсинга</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Количество рабочих мест</label>
                                 <input type="number" id="it-workplaces" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue" value="10" min="1">
@@ -819,7 +819,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость в месяц:</p>
@@ -834,8 +834,8 @@
 
                     <!-- Electro Calculator -->
                     <div id="electro-calc" class="calc-content hidden">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости электромонтажа</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-6">Расчёт стоимости электромонтажа</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Тип помещения</label>
                                 <select id="electro-type" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue">
@@ -871,7 +871,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-6 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 md:p-6 rounded-2xl mb-6">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="text-sm opacity-80 mb-1">Примерная стоимость:</p>
@@ -900,13 +900,13 @@
     <!-- Projects Section -->
     <section id="projects" class="py-24 bg-white overflow-hidden">
         <div class="container mx-auto px-4 mb-12">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-4 md:p-6">
                 <div>
                     <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-3 block">Портфолио</span>
                     <h2 class="text-4xl md:text-6xl font-bold text-brand-dark mb-4">Крупные Проекты</h2>
                     <p class="text-slate-500 text-lg">Нам доверяют объекты федерального уровня</p>
                 </div>
-                <div class="flex gap-3">
+                <div class="flex gap-2 md:p-3">
                     <button class="project-prev w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition" aria-label="Предыдущий">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
@@ -918,35 +918,35 @@
         </div>
 
         <!-- Scroll Container with Smooth Scroll -->
-        <div class="projects-slider flex overflow-x-auto gap-6 px-4 pb-8 snap-x snap-mandatory scroll-smooth" style="scroll-behavior: smooth;">
+        <div class="projects-slider flex overflow-x-auto gap-4 md:p-6 px-4 pb-8 snap-x snap-mandatory scroll-smooth" style="scroll-behavior: smooth;">
             <!-- Project 1: FIFA 2018 -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="FIFA 2018 Стадион Фишт Сочи" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2018</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">FIFA 2018, стадион «Фишт»</h3>
+                    <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">FIFA 2018, стадион «Фишт»</h3>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">5000+</div>
+                    <div class="grid grid-cols-2 gap-2 md:gap-2 md:p-3 mb-3 md:mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">5000+</div>
                             <div class="text-xs text-white/80">Точек доступа</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">48</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">48</div>
                             <div class="text-xs text-white/80">Волокон ВОЛС</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">100%</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">100%</div>
                             <div class="text-xs text-white/80">Сертификация</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">60</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">60</div>
                             <div class="text-xs text-white/80">Месяцев гарантии</div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                    <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm">
                         <span class="font-semibold">СКС • ВОЛС • Wi-Fi</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                     </div>
@@ -954,33 +954,33 @@
             </a>
 
             <!-- Project 2: Olympics 2014 -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=800&h=600&fit=crop" alt="Олимпиада 2014 Сочи Красная Поляна" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2014</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Олимпиада 2014</h3>
+                    <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Олимпиада 2014</h3>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">28 км</div>
+                    <div class="grid grid-cols-2 gap-2 md:gap-2 md:p-3 mb-3 md:mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">28 км</div>
                             <div class="text-xs text-white/80">ВОЛС проложено</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">150+</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">150+</div>
                             <div class="text-xs text-white/80">Объектов</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">250</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">250</div>
                             <div class="text-xs text-white/80">Камер</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">24/7</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">24/7</div>
                             <div class="text-xs text-white/80">Мониторинг</div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                    <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm">
                         <span class="font-semibold">ВОЛС • Видеонаблюдение • СКУД</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                     </div>
@@ -988,33 +988,33 @@
             </a>
 
             <!-- Project 3: Gorki Gorod -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Горки Город курорт Сочи видеонаблюдение" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">ЖКХ • 2016</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Горки Город</h3>
+                    <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Горки Город</h3>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">250</div>
+                    <div class="grid grid-cols-2 gap-2 md:gap-2 md:p-3 mb-3 md:mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">250</div>
                             <div class="text-xs text-white/80">IP-камер</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">120</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">120</div>
                             <div class="text-xs text-white/80">Точек СКУД</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">500+</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">500+</div>
                             <div class="text-xs text-white/80">Точек Wi-Fi</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">99.9%</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">99.9%</div>
                             <div class="text-xs text-white/80">Uptime</div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                    <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm">
                         <span class="font-semibold">Видеонаблюдение • СКУД • Wi-Fi</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                     </div>
@@ -1022,33 +1022,33 @@
             </a>
 
             <!-- Project 4: Sochivodokanal -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Сочиводоканал промышленность автоматизация" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Промышленность</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Сочиводоканал</h3>
+                    <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Сочиводоканал</h3>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">50+</div>
+                    <div class="grid grid-cols-2 gap-2 md:gap-2 md:p-3 mb-3 md:mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">50+</div>
                             <div class="text-xs text-white/80">Объектов</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">Profibus</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">Profibus</div>
                             <div class="text-xs text-white/80">Промсеть</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">SCADA</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">SCADA</div>
                             <div class="text-xs text-white/80">Диспетчеризация</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">30%</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">30%</div>
                             <div class="text-xs text-white/80">Экономия</div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                    <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm">
                         <span class="font-semibold">Автоматизация • SCADA • Мониторинг</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                     </div>
@@ -1056,33 +1056,33 @@
             </a>
 
             <!-- Project 5: Hotel 5* -->
-            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-80 md:h-[420px] flex-shrink-0 scroll-smooth">
+            <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Отель 5 звезд Сочи IT инфраструктура" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Гостиницы</span>
-                    <h3 class="text-white text-2xl font-bold mb-3">Отель 5*</h3>
+                    <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Отель 5*</h3>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">200+</div>
+                    <div class="grid grid-cols-2 gap-2 md:gap-2 md:p-3 mb-3 md:mb-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">200+</div>
                             <div class="text-xs text-white/80">Номеров</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">80</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">80</div>
                             <div class="text-xs text-white/80">Камер</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">PMS</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">PMS</div>
                             <div class="text-xs text-white/80">Интеграция</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                            <div class="text-2xl font-bold text-brand-orange">1 Гбит</div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-3">
+                            <div class="text-lg md:text-2xl font-bold text-brand-orange">1 Гбит</div>
                             <div class="text-xs text-white/80">Интернет</div>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-white/90 text-sm">
+                    <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm">
                         <span class="font-semibold">Видеонаблюдение • СКУД • PMS • Wi-Fi</span>
                         <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                     </div>
@@ -1108,7 +1108,7 @@
             </div>
 
             <!-- Stats Cards Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:p-6 mb-16">
                 <div class="stat-card scroll-reveal scroll-delay-1">
                     <div class="stat-number">15+</div>
                     <div class="stat-label">Лет опыта</div>
@@ -1128,9 +1128,9 @@
             </div>
 
             <!-- Feature Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-6">
                 <!-- Feature 1 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-1">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-1">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
@@ -1139,7 +1139,7 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-2">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-2">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-medal"></i>
                     </div>
@@ -1148,7 +1148,7 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-3">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-3">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
@@ -1157,7 +1157,7 @@
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-4">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-4">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-truck-fast"></i>
                     </div>
@@ -1166,7 +1166,7 @@
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-5">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-5">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-file-contract"></i>
                     </div>
@@ -1175,7 +1175,7 @@
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl scroll-reveal scroll-delay-1">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl scroll-reveal scroll-delay-1">
                     <div class="step-number mb-4">
                         <i class="fa-solid fa-headset"></i>
                     </div>
@@ -1357,7 +1357,7 @@
                 <!-- Blog 1 -->
                 <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition">
                     <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&h=400&fit=crop" alt="Монтаж СКС в отеле Сочи" class="w-full h-48 object-cover" loading="lazy">
-                    <div class="p-6">
+                    <div class="p-4 md:p-6">
                         <span class="text-brand-orange text-xs font-semibold uppercase">Кейс</span>
                         <h3 class="text-xl font-bold text-brand-dark mt-2 mb-3">Монтаж СКС в отеле Сочи: 500 точек за 45 дней</h3>
                         <p class="text-slate-600 text-sm mb-4 line-clamp-2">Как мы организовали работу и сдали объект в срок с полной сертификацией...</p>
@@ -1368,7 +1368,7 @@
                 <!-- Blog 2 -->
                 <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition">
                     <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop" alt="ВОЛС 10 Гбит для бизнес центра" class="w-full h-48 object-cover" loading="lazy">
-                    <div class="p-6">
+                    <div class="p-4 md:p-6">
                         <span class="text-brand-orange text-xs font-semibold uppercase">Технологии</span>
                         <h3 class="text-xl font-bold text-brand-dark mt-2 mb-3">ВОЛС 10 Гбит/с для бизнес-центра в центре Сочи</h3>
                         <p class="text-slate-600 text-sm mb-4 line-clamp-2">Особенности прокладки волоконно-оптических линий в условиях плотной застройки...</p>
@@ -1379,7 +1379,7 @@
                 <!-- Blog 3 -->
                 <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition">
                     <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop" alt="СКУД видеонаблюдение склад" class="w-full h-48 object-cover" loading="lazy">
-                    <div class="p-6">
+                    <div class="p-4 md:p-6">
                         <span class="text-brand-orange text-xs font-semibold uppercase">Безопасность</span>
                         <h3 class="text-xl font-bold text-brand-dark mt-2 mb-3">СКУД + видеонаблюдение для складского комплекса</h3>
                         <p class="text-slate-600 text-sm mb-4 line-clamp-2">Комплексное решение для контроля доступа и безопасности на складе 5000 м²...</p>
@@ -1405,7 +1405,7 @@
                 </div>
                 
                 <form id="contactForm" class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl" action="submit.php" method="POST">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-6 mb-6">
                         <div>
                             <label class="block text-slate-700 text-sm font-semibold mb-2" for="name">Ваше имя *</label>
                             <input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition" type="text" id="name" name="name" placeholder="Иван Иванов" required>
@@ -1436,7 +1436,7 @@
                         <label class="block text-slate-700 text-sm font-semibold mb-2" for="message">Комментарий к проекту</label>
                         <textarea class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition" id="message" name="message" rows="4" placeholder="Опишите задачу: тип объекта, площадь, количество точек..."></textarea>
                     </div>
-                    <div class="flex items-start gap-3 mb-6">
+                    <div class="flex items-start gap-2 md:p-3 mb-6">
                         <input type="checkbox" id="privacy" name="privacy" class="mt-1 w-4 h-4 text-brand-blue rounded focus:ring-brand-blue" required checked>
                         <label for="privacy" class="text-sm text-slate-600">
                             Я согласен на обработку персональных данных в соответствии с 
@@ -1543,10 +1543,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Info -->
                 <div>
-                    <a href="index.html" class="flex items-center gap-3 mb-6 group">
+                    <a href="index.html" class="flex items-center gap-2 md:p-3 mb-6 group">
                         <img src="images/logo.jpg" alt="ИТА Сочи логотип" class="w-16 h-16 object-contain group-hover:scale-110 transition">
                         <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-white leading-none">ИТА</span>
+                            <span class="text-lg md:text-2xl font-bold text-white leading-none">ИТА</span>
                             <span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span>
                         </div>
                     </a>
@@ -1564,19 +1564,19 @@
                 <div>
                     <h4 class="text-white font-bold mb-6 text-lg">Контакты</h4>
                     <ul class="space-y-4 text-sm">
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-2 md:p-3">
                             <i class="fa-solid fa-location-dot mt-1 text-brand-orange"></i>
                             <span>г. Сочи, ул. Севастопольская, 25<br><span class="text-slate-500">Офис 304</span></span>
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-center gap-2 md:p-3">
                             <i class="fa-solid fa-phone text-brand-orange"></i>
                             <a href="tel:+79882340095" class="hover:text-white transition font-medium">+7 (988) 234-00-95</a>
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-center gap-2 md:p-3">
                             <i class="fa-solid fa-envelope text-brand-orange"></i>
                             <a href="mailto:info@ita-sochi.ru" class="hover:text-white transition">info@ita-sochi.ru</a>
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-center gap-2 md:p-3">
                             <i class="fa-solid fa-clock text-brand-orange"></i>
                             <span>Пн-Пт: 9:00 - 18:00</span>
                         </li>
@@ -1598,7 +1598,7 @@
                 <!-- Partners -->
                 <div>
                     <h4 class="text-white font-bold mb-6 text-lg">Партнёры</h4>
-                    <div class="flex flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-2 md:p-3">
                         <div class="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition">Fluke Networks</div>
                         <div class="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition">Hikvision</div>
                         <div class="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition">Hyperline</div>
@@ -1626,7 +1626,7 @@
                 <div class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fa-solid fa-phone text-brand-orange text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-dark mb-2">Заказать звонок</h3>
+                <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-2">Заказать звонок</h3>
                 <p class="text-slate-600 text-sm">Оставьте номер, инженер свяжется в течение 15 минут</p>
             </div>
             
@@ -1651,7 +1651,7 @@
     </div>
 
     <!-- Quick Contact Widget -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 md:p-3">
         <!-- Phone Button -->
         <a href="tel:+79882340095" class="group flex items-center gap-2 bg-white hover:bg-brand-blue hover:text-white text-brand-blue px-4 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 opacity-0 translate-x-8 hidden-widget" aria-label="Позвонить">
             <i class="fa-solid fa-phone text-lg"></i>
