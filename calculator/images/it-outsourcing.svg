@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ffedd5"/>
+  
+  <!-- Computer monitor -->
+  <rect x="100" y="60" width="200" height="130" rx="8" fill="#ea580c"/>
+  <rect x="110" y="70" width="180" height="100" rx="4" fill="#fed7aa"/>
+  
+  <!-- Screen content - code lines -->
+  <rect x="120" y="85" width="80" height="6" rx="2" fill="#fb923c"/>
+  <rect x="120" y="95" width="120" height="6" rx="2" fill="#fb923c"/>
+  <rect x="120" y="105" width="100" height="6" rx="2" fill="#fb923c"/>
+  <rect x="120" y="120" width="60" height="6" rx="2" fill="#ea580c"/>
+  <rect x="120" y="130" width="90" height="6" rx="2" fill="#ea580c"/>
+  <rect x="120" y="140" width="110" height="6" rx="2" fill="#ea580c"/>
+  <rect x="120" y="150" width="70" height="6" rx="2" fill="#fb923c"/>
+  
+  <!-- Monitor stand -->
+  <rect x="185" y="190" width="30" height="20" fill="#c2410c"/>
+  <rect x="160" y="210" width="80" height="8" rx="3" fill="#c2410c"/>
+  
+  <!-- Headset -->
+  <path d="M 140 100 Q 140 60 200 60 Q 260 60 260 100" stroke="#7c2d12" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <rect x="130" y="100" width="20" height="35" rx="5" fill="#7c2d12"/>
+  <rect x="250" y="100" width="20" height="35" rx="5" fill="#7c2d12"/>
+  <line x1="130" y1="120" x2="110" y2="140" stroke="#7c2d12" stroke-width="4"/>
+  <circle cx="110" cy="145" r="6" fill="#dc2626"/>
+  
+  <!-- Status indicator -->
+  <circle cx="280" cy="80" r="8" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- WiFi signal -->
+  <path d="M 300 70 Q 310 60 320 70" stroke="#ea580c" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 295 75 Q 310 60 325 75" stroke="#ea580c" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M 290 80 Q 310 55 330 80" stroke="#ea580c" stroke-width="3" fill="none" opacity="0.2"/>
+  
+  <!-- Title text -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ea580c">IT-аутсорсинг</text>
+  <text x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Техническая поддержка</text>
+</svg>

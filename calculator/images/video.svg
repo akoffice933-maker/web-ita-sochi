@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f3e8ff"/>
+  
+  <!-- Camera body -->
+  <rect x="140" y="100" width="120" height="80" rx="10" fill="#7c3aed"/>
+  
+  <!-- Camera lens -->
+  <circle cx="200" cy="140" r="30" fill="#1e1b4b"/>
+  <circle cx="200" cy="140" r="22" fill="#4c1d95"/>
+  <circle cx="200" cy="140" r="15" fill="#7c3aed"/>
+  <circle cx="200" cy="140" r="8" fill="#a78bfa"/>
+  <circle cx="195" cy="135" r="3" fill="white" opacity="0.6"/>
+  
+  <!-- Camera mount -->
+  <rect x="185" y="180" width="30" height="40" fill="#5b21b6"/>
+  <rect x="175" y="220" width="50" height="10" rx="3" fill="#5b21b6"/>
+  
+  <!-- IR LEDs -->
+  <circle cx="175" cy="120" r="3" fill="#dc2626" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="225" cy="120" r="3" fill="#dc2626" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="175" cy="160" r="3" fill="#dc2626" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="225" cy="160" r="3" fill="#dc2626" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Vision cone -->
+  <path d="M 200 140 L 350 80 L 350 200 Z" fill="#a78bfa" opacity="0.3"/>
+  <path d="M 200 140 L 320 90 L 320 190 Z" fill="#7c3aed" opacity="0.2"/>
+  
+  <!-- Title text -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c3aed">Видеонаблюдение</text>
+  <text x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Системы безопасности</text>
+</svg>

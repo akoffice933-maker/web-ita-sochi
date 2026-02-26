@@ -1,0 +1,23 @@
+{
+    "name": "ita-sochi/calculator",
+    "description": "Калькулятор строительных смет для ИТА Сочи",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.1",
+        "dompdf/dompdf": "^3.0",
+        "phpoffice/phpspreadsheet": "^1.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "ItaSochi\\Calculator\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

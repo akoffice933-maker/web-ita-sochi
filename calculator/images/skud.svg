@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#dcfce7"/>
+  
+  <!-- ID Card -->
+  <rect x="120" y="70" width="160" height="100" rx="8" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  
+  <!-- Card chip -->
+  <rect x="135" y="85" width="25" height="20" rx="2" fill="#fbbf24"/>
+  <rect x="138" y="90" width="8" height="3" rx="1" fill="#d97706"/>
+  <rect x="138" y="95" width="8" height="3" rx="1" fill="#d97706"/>
+  <rect x="148" y="90" width="8" height="3" rx="1" fill="#d97706"/>
+  <rect x="148" y="95" width="8" height="3" rx="1" fill="#d97706"/>
+  
+  <!-- Card photo placeholder -->
+  <rect x="175" y="85" width="35" height="40" rx="2" fill="#86efac"/>
+  <circle cx="192" cy="95" r="6" fill="#166534"/>
+  <path d="M 184 108 Q 192 102 200 108" fill="#166534"/>
+  
+  <!-- Card lines -->
+  <rect x="135" y="130" width="80" height="6" rx="2" fill="#86efac"/>
+  <rect x="135" y="140" width="60" height="6" rx="2" fill="#86efac"/>
+  
+  <!-- Access waves -->
+  <path d="M 290 120 Q 310 120 310 140" stroke="#22c55e" stroke-width="3" fill="none" opacity="0.6">
+    <animate attributeName="d" values="M 290 120 Q 310 120 310 140;M 290 120 Q 320 120 320 140;M 290 120 Q 310 120 310 140" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 295 120 Q 305 120 305 135" stroke="#22c55e" stroke-width="3" fill="none" opacity="0.4">
+    <animate attributeName="d" values="M 295 120 Q 305 120 305 135;M 295 120 Q 315 120 315 135;M 295 120 Q 305 120 305 135" dur="1.2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Reader -->
+  <rect x="80" y="180" width="60" height="40" rx="5" fill="#15803d"/>
+  <rect x="90" y="190" width="40" height="20" rx="2" fill="#22c55e"/>
+  <circle cx="110" cy="200" r="3" fill="#dc2626">
+    <animate attributeName="fill" values="#dc2626;#22c55e;#dc2626" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Title text -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">СКУД</text>
+  <text x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Контроль доступа</text>
+</svg>

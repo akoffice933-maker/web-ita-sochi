@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#dbeafe"/>
+  
+  <!-- Server rack base -->
+  <rect x="80" y="60" width="240" height="180" rx="8" fill="#1e40af"/>
+  
+  <!-- Server slots -->
+  <rect x="100" y="80" width="200" height="25" rx="3" fill="#3b82f6"/>
+  <rect x="100" y="115" width="200" height="25" rx="3" fill="#3b82f6"/>
+  <rect x="100" y="150" width="200" height="25" rx="3" fill="#3b82f6"/>
+  <rect x="100" y="185" width="200" height="25" rx="3" fill="#3b82f6"/>
+  
+  <!-- Server lights -->
+  <circle cx="310" cy="92.5" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="310" cy="127.5" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="310" cy="162.5" r="4" fill="#fbbf24">
+    <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="310" cy="197.5" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Network cables -->
+  <path d="M 80 100 Q 40 100 40 150" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+  <path d="M 80 135 Q 30 135 30 150" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+  <path d="M 80 170 Q 50 170 50 150" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+  <path d="M 80 205 Q 35 205 35 150" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+  
+  <!-- Title text -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e40af">СКС</text>
+  <text x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Структурированные кабельные сети</text>
+</svg>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор смет - ИТА Сочи</title>
+    <meta name="description" content="Онлайн калькулятор для расчета стоимости услуг: СКС, видеонаблюдение, СКУД, IT-аутсорсинг, электромонтаж">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.svg">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0066cc',
+                            dark: '#003087',
+                            light: '#f0f7ff',
+                            orange: '#ff7a00',
+                            orangeHover: '#e65c00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-2 p-2 group">
+                <img src="../images/logo.jpg" alt="ИТА Сочи логотип" class="w-12 h-12 object-contain">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-brand-dark leading-none">ИТА</span>
+                    <span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span>
+                </div>
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-1 font-medium">
+                <a href="../index.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">
+                    <i class="fa-solid fa-house mr-1"></i> Главная
+                </a>
+                <a href="../pages/uslugi.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">
+                    <i class="fa-solid fa-briefcase mr-1"></i> Услуги
+                </a>
+                <a href="../pages/contacts.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">
+                    <i class="fa-solid fa-phone mr-1"></i> Контакты
+                </a>
+            </nav>
+            
+            <!-- Contact -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+79882340095" class="hidden sm:flex items-center gap-2 text-brand-dark font-bold hover:text-brand-blue transition">
+                    <i class="fa-solid fa-phone text-brand-orange text-sm"></i>
+                    <span class="text-sm">+7 (988) 234-00-95</span>
+                </a>
+                <a href="../index.html#contact-form" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm">
+                    Заказать звонок
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 mb-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-brand-blue/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
+                    <i class="fa-solid fa-calculator text-brand-orange"></i>
+                    <span class="text-brand-dark font-medium">Онлайн расчет стоимости услуг</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-dark mb-4 leading-tight">
+                    Калькулятор строительных смет
+                </h1>
+                
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                    Выберите категорию услуг и получите предварительный расчет стоимости материалов и работ
+                </p>
+            </div>
+        </section>
+        
+        <!-- Categories Grid -->
+        <section class="container mx-auto px-4">
+            <div id="categories-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Карточки категорий будут загружены здесь -->
+                <div class="col-span-full text-center py-12">
+                    <i class="fa-solid fa-circle-notch fa-spin text-4xl text-brand-blue mb-4"></i>
+                    <p class="text-slate-500">Загрузка категорий...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Templates Section (скрыт по умолчанию) -->
+        <section id="templates-section" class="container mx-auto px-4 mt-12 hidden">
+            <button onclick="showCategories()" class="mb-6 flex items-center gap-2 text-brand-blue hover:text-brand-dark font-medium transition">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Назад к категориям</span>
+            </button>
+            
+            <h2 id="category-title" class="text-2xl md:text-3xl font-bold text-brand-dark mb-6"></h2>
+            
+            <div id="templates-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Шаблоны будут загружены здесь -->
+            </div>
+        </section>
+        
+        <!-- Calculator Section (скрыт по умолчанию) -->
+        <section id="calculator-section" class="container mx-auto px-4 mt-12 hidden">
+            <button onclick="showTemplates()" class="mb-6 flex items-center gap-2 text-brand-blue hover:text-brand-dark font-medium transition">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Назад к шаблонам</span>
+            </button>
+            
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <!-- Calculator Header -->
+                <div class="bg-gradient-to-r from-brand-dark to-brand-blue p-6 text-white">
+                    <h2 id="calculator-title" class="text-2xl font-bold mb-2"></h2>
+                    <p id="calculator-description" class="text-white/90"></p>
+                </div>
+                
+                <!-- Calculator Form -->
+                <div class="p-6 md:p-8">
+                    <!-- Base Parameter -->
+                    <div class="mb-8">
+                        <label id="base-param-label" class="block text-sm font-semibold text-slate-700 mb-3"></label>
+                        <div class="flex items-center gap-4">
+                            <input type="range" id="base-param-slider" min="1" max="100" value="10" step="1" 
+                                   class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-blue">
+                            <div class="relative">
+                                <input type="number" id="base-param-input" min="1" max="1000" value="10" step="1"
+                                       class="w-24 px-4 py-2 border border-slate-300 rounded-lg text-center font-bold text-brand-blue focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
+                                <span id="base-param-unit" class="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-slate-400"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coefficients -->
+                    <div id="coefficients-container" class="mb-8 space-y-6">
+                        <!-- Коэффициенты будут загружены здесь -->
+                    </div>
+                    
+                    <!-- Electrical Addon -->
+                    <div id="electrical-addon" class="mb-8 hidden">
+                        <label class="flex items-start gap-3 p-4 border-2 border-slate-200 rounded-xl cursor-pointer hover:border-brand-blue/50 transition">
+                            <input type="checkbox" id="include-electrical" class="w-5 h-5 text-brand-blue rounded focus:ring-brand-blue mt-0.5">
+                            <div>
+                                <span class="font-semibold text-slate-700">Добавить электромонтаж под ключ</span>
+                                <p class="text-sm text-slate-500 mt-1">Включает прокладку кабеля, установку розеток, выключателей и сборку электрощита</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <!-- Additional Works -->
+                    <div id="additional-works-container" class="mb-8 hidden">
+                        <h3 class="text-lg font-semibold text-slate-700 mb-4">Дополнительные работы</h3>
+                        <div id="additional-works-list" class="space-y-3">
+                            <!-- Дополнительные работы будут загружены здесь -->
+                        </div>
+                    </div>
+                    
+                    <!-- Calculate Button -->
+                    <button onclick="calculateEstimate()" 
+                            class="w-full bg-gradient-to-r from-brand-blue to-brand-dark hover:from-brand-blue hover:to-brand-dark text-white font-bold py-4 px-6 rounded-xl transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Рассчитать смету</span>
+                    </button>
+                    
+                    <!-- Loading Indicator -->
+                    <div id="loading-indicator" class="hidden text-center py-8">
+                        <i class="fa-solid fa-circle-notch fa-spin text-4xl text-brand-blue mb-3"></i>
+                        <p class="text-slate-500">Выполняется расчет...</p>
+                    </div>
+                </div>
+                
+                <!-- Results -->
+                <div id="results-container" class="hidden border-t border-slate-200">
+                    <div class="bg-slate-50 p-6 md:p-8">
+                        <!-- Total Amount -->
+                        <div class="text-center mb-8 p-6 bg-gradient-to-r from-brand-orange/10 to-brand-blue/10 rounded-2xl border border-brand-orange/20">
+                            <p class="text-slate-600 font-medium mb-2">Итоговая стоимость:</p>
+                            <p id="total-amount" class="text-4xl md:text-5xl font-extrabold text-brand-dark">
+                                0 ₽
+                            </p>
+                            <p id="total-breakdown" class="text-sm text-slate-500 mt-2"></p>
+                        </div>
+                        
+                        <!-- Materials Table -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-brand-dark mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-box text-brand-orange"></i>
+                                Материалы
+                            </h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left py-3 px-4 font-semibold text-slate-700">Наименование</th>
+                                            <th class="text-center py-3 px-4 font-semibold text-slate-700">Кол-во</th>
+                                            <th class="text-center py-3 px-4 font-semibold text-slate-700">Ед. изм.</th>
+                                            <th class="text-right py-3 px-4 font-semibold text-slate-700">Цена (₽)</th>
+                                            <th class="text-right py-3 px-4 font-semibold text-slate-700">Сумма (₽)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="materials-table-body" class="divide-y divide-slate-200"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Works Table -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-brand-dark mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-tools text-brand-blue"></i>
+                                Работы
+                            </h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left py-3 px-4 font-semibold text-slate-700">Наименование</th>
+                                            <th class="text-center py-3 px-4 font-semibold text-slate-700">Кол-во</th>
+                                            <th class="text-center py-3 px-4 font-semibold text-slate-700">Ед. изм.</th>
+                                            <th class="text-right py-3 px-4 font-semibold text-slate-700">Цена (₽)</th>
+                                            <th class="text-right py-3 px-4 font-semibold text-slate-700">Сумма (₽)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="works-table-body" class="divide-y divide-slate-200"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Applied Coefficients -->
+                        <div id="applied-coefficients" class="mb-8 p-4 bg-blue-50 rounded-xl border border-blue-200 hidden">
+                            <h4 class="font-semibold text-brand-dark mb-3 text-sm">Примененные коэффициенты:</h4>
+                            <div id="coefficients-list" class="flex flex-wrap gap-2"></div>
+                        </div>
+                        
+                        <!-- Export Buttons -->
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="exportPDF()" class="flex-1 min-w-[200px] bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>Скачать PDF</span>
+                            </button>
+                            <button onclick="exportExcel()" class="flex-1 min-w-[200px] bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-excel"></i>
+                                <span>Скачать Excel</span>
+                            </button>
+                            <button onclick="printEstimate()" class="flex-1 min-w-[200px] bg-slate-600 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-print"></i>
+                                <span>Печать</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Disclaimer -->
+                        <p class="text-xs text-slate-500 mt-6 text-center">
+                            * Смета является предварительной и не является публичной офертой.<br>
+                            Для получения точного расчета свяжитесь с нашими специалистами.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-8 border-t border-slate-700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="../images/logo.jpg" alt="ИТА Сочи" class="w-10 h-10 object-contain bg-white rounded-full p-1">
+                    <div>
+                        <p class="font-bold">ИТА Сочи</p>
+                        <p class="text-xs text-slate-300">Системный интегратор</p>
+                    </div>
+                </div>
+                <div class="text-sm text-slate-300 text-center md:text-right">
+                    <p><i class="fa-solid fa-phone mr-2"></i>+7 (988) 234-00-95</p>
+                    <p><i class="fa-solid fa-envelope mr-2"></i>info@ita-sochi.ru</p>
+                    <p><i class="fa-solid fa-location-dot mr-2"></i>г. Сочи, ул. Севастопольская, 25, офис 304</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-6 pt-6 text-center text-xs text-slate-400">
+                <p>&copy; 2011–2026 ИТА Сочи. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator.js"></script>
+</body>
+</html>

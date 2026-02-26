@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#fee2e2"/>
+  
+  <!-- Electrical panel -->
+  <rect x="130" y="50" width="140" height="180" rx="5" fill="#dc2626"/>
+  <rect x="140" y="60" width="120" height="160" rx="2" fill="#fef2f2"/>
+  
+  <!-- Circuit breakers -->
+  <rect x="150" y="70" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="150" y="75" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="162" cy="95" r="4" fill="#22c55e"/>
+  
+  <rect x="180" y="70" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="180" y="75" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="192" cy="95" r="4" fill="#22c55e"/>
+  
+  <rect x="210" y="70" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="210" y="75" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="222" cy="95" r="4" fill="#fbbf24"/>
+  
+  <rect x="150" y="115" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="150" y="120" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="162" cy="140" r="4" fill="#22c55e"/>
+  
+  <rect x="180" y="115" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="180" y="120" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="192" cy="140" r="4" fill="#22c55e"/>
+  
+  <rect x="210" y="115" width="25" height="35" rx="2" fill="#1e293b"/>
+  <rect x="210" y="120" width="25" height="8" rx="1" fill="#64748b"/>
+  <circle cx="222" cy="140" r="4" fill="#22c55e"/>
+  
+  <!-- Main switch -->
+  <rect x="150" y="160" width="85" height="50" rx="3" fill="#7c2d12"/>
+  <rect x="165" y="175" width="55" height="20" rx="2" fill="#dc2626"/>
+  <text x="192" y="188" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">25A</text>
+  
+  <!-- Lightning bolt -->
+  <polygon points="280,80 270,110 285,110 275,140 300,100 285,100" fill="#fbbf24" stroke="#dc2626" stroke-width="2">
+    <animate attributeName="opacity" values="1;0.5;1" dur="0.8s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Cable -->
+  <path d="M 100 200 Q 100 150 130 150" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 100 210 Q 100 160 130 160" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">Электромонтаж</text>
+  <text x="200" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Электрика под ключ</text>
+</svg>
