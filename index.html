@@ -554,13 +554,26 @@
     </section>
 
     <!-- Calculator Section -->
-    <section class="py-24 bg-gradient-to-br from-brand-light to-white">
+    <section class="py-24 bg-gradient-to-br from-brand-light to-white" id="calculator-section">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 animate-fade-in-up">
                 <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-3 block">Калькулятор</span>
                 <h2 class="text-4xl md:text-6xl font-bold text-brand-dark mb-6">Рассчитать стоимость</h2>
                 <div class="w-32 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full mb-6"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Онлайн-расчёт стоимости услуг. Точную цену назовёт инженер после выезда на объект.</p>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg mb-8">
+                    Онлайн-расчёт стоимости услуг. Точную цену назовёт инженер после выезда на объект.
+                </p>
+                
+                <!-- Кнопка перехода к полной версии -->
+                <a href="calculator/" class="inline-flex items-center gap-3 bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <i class="fa-solid fa-calculator text-xl"></i>
+                    <span>Перейти к полному калькулятору смет</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="text-sm text-slate-500 mt-4">
+                    <i class="fa-solid fa-circle-info mr-1"></i>
+                    Полная версия: 6 шаблонов, коэффициенты, экспорт в PDF/Excel
+                </p>
             </div>
 
             <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden animate-scale-in">
