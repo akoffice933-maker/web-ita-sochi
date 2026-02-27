@@ -872,5 +872,15 @@
 
     <!-- JavaScript -->
     <script src="js/interaktiv.js"></script>
+    
+    <!-- Debug script -->
+    <script>
+        // Проверяем загрузку
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Interaktiv page loaded');
+            console.log('selectType function:', typeof window.selectType);
+            console.log('calculateResult function:', typeof window.calculateResult);
+        });
+    </script>
 </body>
 </html>

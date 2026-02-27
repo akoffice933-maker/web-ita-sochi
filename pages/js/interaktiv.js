@@ -1,3 +1,13 @@
+// Экспорт для глобального доступа (объявляем сразу)
+window.selectType = function(type) { selectTypeInternal(type); };
+window.selectSize = function(size) { selectSizeInternal(size); };
+window.selectMount = function(mount) { selectMountInternal(mount); };
+window.toggleExtra = function(extra) { toggleExtraInternal(extra); };
+window.calculateResult = function() { calculateResultInternal(); };
+window.scrollToCalculator = function(target) { scrollToCalculatorInternal(target); };
+window.scrollToForm = scrollToForm;
+window.toggleModal = toggleModal;
+
 /**
  * JavaScript для страницы "Интерактивные решения"
  * Калькулятор-виджет и интерактивность
@@ -93,7 +103,7 @@ function goToStep(step) {
     updateProgressBar();
 }
 
-function selectType(type) {
+function selectTypeInternal(type) {
     calculatorData.type = type;
     
     // Визуальное выделение
@@ -134,7 +144,7 @@ function showSizesForType(type) {
     setTimeout(() => goToStep(2), 400);
 }
 
-function selectSize(size) {
+function selectSizeInternal(size) {
     calculatorData.size = size;
     
     // Визуальное выделение
@@ -153,7 +163,7 @@ function selectSize(size) {
     setTimeout(() => goToStep(3), 400);
 }
 
-function selectMount(mount) {
+function selectMountInternal(mount) {
     calculatorData.mount = mount;
     
     // Визуальное выделение
@@ -169,7 +179,7 @@ function selectMount(mount) {
     }
 }
 
-function toggleExtra(extra) {
+function toggleExtraInternal(extra) {
     const index = calculatorData.extras.indexOf(extra);
     const el = document.querySelector(`[data-extra="${extra}"]`);
     
@@ -188,7 +198,7 @@ function toggleExtra(extra) {
     }
 }
 
-function calculateResult() {
+function calculateResultInternal() {
     // Валидация
     if (!calculatorData.type || !calculatorData.size) {
         alert('Пожалуйста, выберите тип оборудования и размер');
@@ -455,7 +465,7 @@ function initStickyCTA() {
     });
 }
 
-function scrollToCalculator(target = '') {
+function scrollToCalculatorInternal(target = '') {
     const calculator = document.getElementById('calculator-widget');
     if (calculator) {
         calculator.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -507,13 +517,3 @@ function toggleModal(modalId) {
         modal.classList.toggle('hidden');
     }
 }
-
-// Экспорт для глобального доступа
-window.selectType = selectType;
-window.selectSize = selectSize;
-window.selectMount = selectMount;
-window.toggleExtra = toggleExtra;
-window.calculateResult = calculateResult;
-window.scrollToCalculator = scrollToCalculator;
-window.scrollToForm = scrollToForm;
-window.toggleModal = toggleModal;
