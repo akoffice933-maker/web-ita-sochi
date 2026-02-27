@@ -182,11 +182,14 @@ function selectSizeInternal(size) {
         el.classList.add('border-slate-300', 'bg-white', 'text-slate-700');
     });
     
-    const selectedEl = document.querySelector(`[data-size="${size}"]`);
-    if (selectedEl) {
-        selectedEl.classList.remove('border-slate-300', 'bg-white', 'text-slate-700');
-        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
-    }
+    // Используем getElementByAttribute вместо querySelector
+    const allButtons = document.querySelectorAll('.size-option');
+    allButtons.forEach(el => {
+        if (el.getAttribute('data-size') === size) {
+            el.classList.remove('border-slate-300', 'bg-white', 'text-slate-700');
+            el.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
+        }
+    });
     
     // Переход к шагу 3
     setTimeout(() => goToStep(3), 400);
