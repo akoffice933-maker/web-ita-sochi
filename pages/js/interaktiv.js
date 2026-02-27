@@ -7,6 +7,22 @@ window.calculateResult = function() { calculateResultInternal(); };
 window.scrollToCalculator = function(target) { scrollToCalculatorInternal(target); };
 window.scrollToForm = scrollToForm;
 window.toggleModal = toggleModal;
+window.smoothScrollTo = function(event, targetId) { smoothScrollTo(event, targetId); };
+
+function smoothScrollTo(event, targetId) {
+    event.preventDefault();
+    const target = document.getElementById(targetId);
+    if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+}
 
 /**
  * JavaScript для страницы "Интерактивные решения"
