@@ -122,16 +122,18 @@ function goToStep(step) {
 function selectTypeInternal(type) {
     calculatorData.type = type;
     
-    // Визуальное выделение
+    console.log('Type selected:', type);
+    
+    // Визуальное выделение - более яркий фон
     document.querySelectorAll('[data-type]').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
-        el.classList.add('border-slate-200');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
+        el.classList.add('border-slate-200', 'bg-white');
     });
     
     const selectedEl = document.querySelector(`[data-type="${type}"]`);
     if (selectedEl) {
-        selectedEl.classList.remove('border-slate-200');
-        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        selectedEl.classList.remove('border-slate-200', 'bg-white');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
     }
     
     // Показываем размеры для выбранного типа
@@ -140,7 +142,10 @@ function selectTypeInternal(type) {
 
 function showSizesForType(type) {
     const sizesContainer = document.getElementById('sizes-container');
-    if (!sizesContainer) return;
+    if (!sizesContainer) {
+        console.error('sizes-container not found');
+        return;
+    }
     
     let sizes = [];
     if (type === 'panel') sizes = ['55"', '65"', '75"', '86"'];
@@ -148,10 +153,12 @@ function showSizesForType(type) {
     else if (type === 'film') sizes = ['32"', '43"', '55"', '65"'];
     else if (type === 'frame') sizes = ['32"', '43"', '55"', '65"', '75"'];
     
+    console.log('Showing sizes for type:', type, sizes);
+    
     sizesContainer.innerHTML = sizes.map(size => `
         <button onclick="selectSize('${size}')" 
                 data-size="${size}"
-                class="size-option w-full md:w-auto px-6 py-3 rounded-xl border-2 border-slate-200 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700">
+                class="size-option px-6 py-4 rounded-xl border-2 border-slate-300 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700 bg-white shadow-sm hover:shadow-md">
             ${size}
         </button>
     `).join('');
@@ -163,16 +170,18 @@ function showSizesForType(type) {
 function selectSizeInternal(size) {
     calculatorData.size = size;
     
-    // Визуальное выделение
+    console.log('Size selected:', size);
+    
+    // Визуальное выделение - более яркий фон
     document.querySelectorAll('.size-option').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
-        el.classList.add('border-slate-200');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
+        el.classList.add('border-slate-300', 'bg-white', 'text-slate-700');
     });
     
     const selectedEl = document.querySelector(`[data-size="${size}"]`);
     if (selectedEl) {
-        selectedEl.classList.remove('border-slate-200');
-        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        selectedEl.classList.remove('border-slate-300', 'bg-white', 'text-slate-700');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
     }
     
     // Переход к шагу 3
@@ -182,16 +191,18 @@ function selectSizeInternal(size) {
 function selectMountInternal(mount) {
     calculatorData.mount = mount;
     
-    // Визуальное выделение
+    console.log('Mount selected:', mount);
+    
+    // Визуальное выделение - более яркий фон
     document.querySelectorAll('[data-mount]').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
-        el.classList.add('border-slate-200');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
+        el.classList.add('border-slate-200', 'bg-white');
     });
     
     const selectedEl = document.querySelector(`[data-mount="${mount}"]`);
     if (selectedEl) {
-        selectedEl.classList.remove('border-slate-200');
-        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        selectedEl.classList.remove('border-slate-200', 'bg-white');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
     }
 }
 
@@ -199,17 +210,19 @@ function toggleExtraInternal(extra) {
     const index = calculatorData.extras.indexOf(extra);
     const el = document.querySelector(`[data-extra="${extra}"]`);
     
+    console.log('Extra toggled:', extra, 'index:', index);
+    
     if (index > -1) {
         calculatorData.extras.splice(index, 1);
         if (el) {
-            el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
-            el.classList.add('border-slate-200');
+            el.classList.remove('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
+            el.classList.add('border-slate-200', 'bg-white', 'text-slate-700');
         }
     } else {
         calculatorData.extras.push(extra);
         if (el) {
-            el.classList.remove('border-slate-200');
-            el.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+            el.classList.remove('border-slate-200', 'bg-white', 'text-slate-700');
+            el.classList.add('ring-2', 'ring-brand-blue', 'bg-gradient-to-br', 'from-brand-blue', 'to-brand-dark', 'text-white', 'border-brand-blue');
         }
     }
 }
