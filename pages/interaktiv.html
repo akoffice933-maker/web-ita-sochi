@@ -770,7 +770,7 @@
         </section>
 
         <!-- 9. Final Form -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-16 md:py-24 bg-white" id="contact-form">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-gradient-to-br from-brand-blue to-brand-dark rounded-3xl shadow-2xl overflow-hidden">
@@ -796,10 +796,10 @@
                             </div>
                             
                             <div class="bg-white p-8 md:p-12">
-                                <form onsubmit="submitForm(event)" class="space-y-4">
+                                <form class="space-y-4">
                                     <div>
                                         <label class="block text-sm font-semibold text-slate-700 mb-2">Тип задачи</label>
-                                        <select class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                                        <select name="service" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
                                             <option>Школа / Детский сад</option>
                                             <option>Офис / Переговорная</option>
                                             <option>Клиника</option>
@@ -807,13 +807,13 @@
                                             <option>Другое</option>
                                         </select>
                                     </div>
-                                    <input type="text" placeholder="Ваше имя" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
-                                    <input type="tel" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
-                                    <input type="email" placeholder="Email (необязательно)" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <input type="text" name="name" placeholder="Ваше имя" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                                    <input type="email" name="email" placeholder="Email (необязательно)" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
                                     <button type="submit" class="w-full bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-3 rounded-xl font-bold transition shadow-lg hover:shadow-xl">
                                         Получить КП и консультацию
                                     </button>
-                                    <p class="text-xs text-slate-500 text-center">Нажимаю кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                                    <p class="text-xs text-slate-500 text-center">Нажимаю кнопку, вы соглашаетесь с <a href="../privacy-policy.html" class="underline hover:text-brand-blue">политикой конфиденциальности</a></p>
                                 </form>
                             </div>
                         </div>

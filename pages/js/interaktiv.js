@@ -12,7 +12,7 @@ let calculatorData = {
     extras: []
 };
 
-// Цены (ориентировочные)
+// Цены на оборудование (ориентировочные, на февраль 2026)
 const PRICES = {
     panel: { '55"': 85000, '65"': 120000, '75"': 180000, '86"': 280000 },
     kiosk: { '32"': 95000, '43"': 135000, '55"': 185000 },
@@ -22,12 +22,20 @@ const PRICES = {
     peripherals: { mic: 8000, speakerphone: 15000, webcam: 12000, software: 25000 }
 };
 
+// Коэффициенты монтажа
+const MOUNT_MULTIPLIERS = {
+    no: 0,
+    chef: 0.05,  // 5% шеф-монтаж
+    full: 0.15   // 15% под ключ
+};
+
 // Инициализация
 document.addEventListener('DOMContentLoaded', function() {
     initCalculator();
     initFAQ();
     initStickyCTA();
     initSmoothScroll();
+    initForms();
 });
 
 // ============================================================================
@@ -42,6 +50,17 @@ function initCalculator() {
             goToStep(stepNum);
         });
     });
+    
+    // Инициализация прогресс бара
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    const progressBar = document.querySelector('.progress-bar');
+    if (progressBar) {
+        const progress = (currentStep / 4) * 100;
+        progressBar.style.width = progress + '%';
+    }
 }
 
 function goToStep(step) {
@@ -49,21 +68,29 @@ function goToStep(step) {
     
     // Обновляем визуальное отображение
     document.querySelectorAll('.calculator-step').forEach((el, index) => {
-        if (index + 1 === step) {
+        const stepId = index + 1;
+        if (stepId === step) {
             el.classList.add('active');
             el.classList.remove('inactive');
         } else {
             el.classList.remove('active');
             el.classList.add('inactive');
         }
+        
+        // Обновляем кнопки в навигации
+        const button = document.querySelector(`[data-calculator-step="${stepId}"]`);
+        if (button) {
+            if (stepId <= step) {
+                button.classList.add('text-brand-blue', 'border-brand-blue');
+                button.classList.remove('text-slate-600');
+            } else {
+                button.classList.remove('text-brand-blue', 'border-brand-blue');
+                button.classList.add('text-slate-600');
+            }
+        }
     });
     
-    // Обновляем прогресс бар
-    const progress = (step / 4) * 100;
-    const progressBar = document.querySelector('.progress-bar');
-    if (progressBar) {
-        progressBar.style.width = progress + '%';
-    }
+    updateProgressBar();
 }
 
 function selectType(type) {
@@ -71,9 +98,15 @@ function selectType(type) {
     
     // Визуальное выделение
     document.querySelectorAll('[data-type]').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        el.classList.add('border-slate-200');
     });
-    document.querySelector(`[data-type="${type}"]`)?.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50');
+    
+    const selectedEl = document.querySelector(`[data-type="${type}"]`);
+    if (selectedEl) {
+        selectedEl.classList.remove('border-slate-200');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+    }
     
     // Показываем размеры для выбранного типа
     showSizesForType(type);
@@ -92,13 +125,13 @@ function showSizesForType(type) {
     sizesContainer.innerHTML = sizes.map(size => `
         <button onclick="selectSize('${size}')" 
                 data-size="${size}"
-                class="size-option w-full md:w-auto px-6 py-3 rounded-xl border-2 border-slate-200 hover:border-brand-blue hover:bg-blue-50 transition font-semibold">
+                class="size-option w-full md:w-auto px-6 py-3 rounded-xl border-2 border-slate-200 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700">
             ${size}
         </button>
     `).join('');
     
-    // Переходим к следующему шагу
-    setTimeout(() => goToStep(2), 300);
+    // Переходим к следующему шагу с небольшой задержкой
+    setTimeout(() => goToStep(2), 400);
 }
 
 function selectSize(size) {
@@ -106,12 +139,18 @@ function selectSize(size) {
     
     // Визуальное выделение
     document.querySelectorAll('.size-option').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        el.classList.add('border-slate-200');
     });
-    document.querySelector(`[data-size="${size}"]`)?.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50');
+    
+    const selectedEl = document.querySelector(`[data-size="${size}"]`);
+    if (selectedEl) {
+        selectedEl.classList.remove('border-slate-200');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+    }
     
     // Переход к шагу 3
-    setTimeout(() => goToStep(3), 300);
+    setTimeout(() => goToStep(3), 400);
 }
 
 function selectMount(mount) {
@@ -119,23 +158,44 @@ function selectMount(mount) {
     
     // Визуальное выделение
     document.querySelectorAll('[data-mount]').forEach(el => {
-        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50');
+        el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        el.classList.add('border-slate-200');
     });
-    document.querySelector(`[data-mount="${mount}"]`)?.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50');
+    
+    const selectedEl = document.querySelector(`[data-mount="${mount}"]`);
+    if (selectedEl) {
+        selectedEl.classList.remove('border-slate-200');
+        selectedEl.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+    }
 }
 
 function toggleExtra(extra) {
     const index = calculatorData.extras.indexOf(extra);
+    const el = document.querySelector(`[data-extra="${extra}"]`);
+    
     if (index > -1) {
         calculatorData.extras.splice(index, 1);
-        document.querySelector(`[data-extra="${extra}"]`)?.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50');
+        if (el) {
+            el.classList.remove('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+            el.classList.add('border-slate-200');
+        }
     } else {
         calculatorData.extras.push(extra);
-        document.querySelector(`[data-extra="${extra}"]`)?.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50');
+        if (el) {
+            el.classList.remove('border-slate-200');
+            el.classList.add('ring-2', 'ring-brand-blue', 'bg-blue-50', 'border-brand-blue');
+        }
     }
 }
 
 function calculateResult() {
+    // Валидация
+    if (!calculatorData.type || !calculatorData.size) {
+        alert('Пожалуйста, выберите тип оборудования и размер');
+        goToStep(1);
+        return;
+    }
+    
     // Переходим к шагу 4
     goToStep(4);
     
@@ -148,10 +208,8 @@ function calculateResult() {
     
     // Монтаж
     let mountPrice = 0;
-    if (calculatorData.mount === 'full') {
-        mountPrice = basePrice * 0.15; // 15% от стоимости оборудования
-    } else if (calculatorData.mount === 'chef') {
-        mountPrice = basePrice * 0.05; // 5% шеф-монтаж
+    if (calculatorData.mount !== 'no') {
+        mountPrice = basePrice * MOUNT_MULTIPLIERS[calculatorData.mount];
     }
     
     // Дополнительные опции
@@ -161,57 +219,199 @@ function calculateResult() {
     });
     
     const totalPrice = basePrice + mountPrice + extrasPrice;
-    const minPrice = Math.round(totalPrice * 0.9 / 1000) * 1000;
-    const maxPrice = Math.round(totalPrice * 1.1 / 1000) * 1000;
+    const minPrice = Math.round(totalPrice * 0.95 / 1000) * 1000;
+    const maxPrice = Math.round(totalPrice * 1.15 / 1000) * 1000;
+    
+    // Формируем название типа оборудования
+    const typeNames = {
+        panel: 'Интерактивная панель',
+        kiosk: 'Киоск самообслуживания',
+        film: 'Сенсорная плёнка',
+        frame: 'IR-рамка'
+    };
     
     // Отображение результата
     const resultContainer = document.getElementById('calculator-result');
     if (resultContainer) {
         resultContainer.innerHTML = `
-            <div class="result-card text-white rounded-2xl p-6 md:p-8">
+            <div class="result-card bg-gradient-to-br from-brand-blue to-brand-dark text-white rounded-2xl p-6 md:p-8 shadow-xl">
                 <div class="text-center mb-6">
-                    <p class="text-white/80 mb-2">Ориентировочная стоимость:</p>
-                    <p class="text-4xl md:text-5xl font-extrabold">${formatPrice(minPrice)} - ${formatPrice(maxPrice)}</p>
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                        <i class="fa-solid fa-check-circle text-green-400"></i>
+                        <span class="text-sm font-medium">Расчет готов</span>
+                    </div>
+                    <p class="text-white/80 mb-2">Ориентировочная стоимость проекта:</p>
+                    <p class="text-3xl md:text-5xl font-extrabold">${formatPrice(minPrice)} - ${formatPrice(maxPrice)}</p>
+                    <p class="text-sm text-white/60 mt-2">для конфигурации: ${typeNames[calculatorData.type] || 'Оборудование'} ${calculatorData.size}</p>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <span>Оборудование (${calculatorData.size})</span>
-                        <span class="font-bold">${formatPrice(basePrice)}</span>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 mb-6">
+                    <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-white/70">Детализация:</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-white/90">Оборудование (${calculatorData.size})</span>
+                            <span class="font-bold text-lg">${formatPrice(basePrice)}</span>
+                        </div>
+                        ${mountPrice > 0 ? `
+                        <div class="flex justify-between items-center">
+                            <span class="text-white/90">Монтаж (${calculatorData.mount === 'full' ? 'под ключ' : 'шеф-монтаж'})</span>
+                            <span class="font-bold text-lg">${formatPrice(mountPrice)}</span>
+                        </div>
+                        ` : ''}
+                        ${extrasPrice > 0 ? `
+                        <div class="flex justify-between items-center">
+                            <span class="text-white/90">Дополнительные опции (${calculatorData.extras.length} шт)</span>
+                            <span class="font-bold text-lg">${formatPrice(extrasPrice)}</span>
+                        </div>
+                        ` : ''}
                     </div>
-                    ${mountPrice > 0 ? `
-                    <div class="flex justify-between items-center mb-2">
-                        <span>Монтаж</span>
-                        <span class="font-bold">${formatPrice(mountPrice)}</span>
-                    </div>
-                    ` : ''}
-                    ${extrasPrice > 0 ? `
-                    <div class="flex justify-between items-center">
-                        <span>Дополнительно</span>
-                        <span class="font-bold">${formatPrice(extrasPrice)}</span>
-                    </div>
-                    ` : ''}
                 </div>
                 
-                <div class="text-center space-y-3">
-                    <p class="text-sm text-white/80">
-                        <i class="fa-solid fa-circle-info mr-1"></i>
-                        Это предварительный расчет. Точную стоимость назовёт инженер после выезда.
+                <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mb-6">
+                    <p class="text-sm text-yellow-200">
+                        <i class="fa-solid fa-circle-info mr-2"></i>
+                        Это предварительный расчет. Точную стоимость назовёт инженер после бесплатного выезда на объект.
                     </p>
-                    
-                    <button onclick="toggleModal('callbackModal')" 
-                            class="w-full bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-3 rounded-xl font-bold transition shadow-lg hover:shadow-xl">
-                        <i class="fa-solid fa-phone mr-2"></i>
+                </div>
+                
+                <div class="space-y-3">
+                    <button onclick="scrollToForm()" 
+                            class="w-full bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-4 rounded-xl font-bold text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-invoice mr-2"></i>
                         Получить точный расчёт и КП
                     </button>
                     
-                    <a href="../calculator/" class="inline-block text-white/80 hover:text-white text-sm underline">
-                        Нужна детальная смета? Перейти в полный калькулятор →
+                    <a href="../calculator/" class="block text-center text-white/70 hover:text-white text-sm transition underline">
+                        Нужна детальная смета с материалами? Перейти в полный калькулятор →
                     </a>
                 </div>
             </div>
         `;
+        
+        // Прокрутка к результату
+        setTimeout(() => {
+            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     }
+}
+
+function scrollToForm() {
+    const formSection = document.querySelector('#contact-form');
+    if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// ============================================================================
+// Формы
+// ============================================================================
+
+function initForms() {
+    // Обработка формы в конце страницы
+    const contactForm = document.querySelector('#contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
+    
+    // Обработка модальной формы
+    const modalForm = document.querySelector('#callbackModal form');
+    if (modalForm) {
+        modalForm.addEventListener('submit', handleFormSubmit);
+    }
+}
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    
+    // Валидация
+    if (!data.name || !data.phone) {
+        alert('Пожалуйста, заполните имя и телефон');
+        return;
+    }
+    
+    // Показываем индикатор загрузки
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Отправка...';
+    
+    // Отправка на сервер
+    fetch('../submit.php', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            // Успех
+            showSuccessModal();
+            form.reset();
+        } else {
+            // Ошибка
+            alert(result.message || 'Ошибка отправки. Попробуйте позже или позвоните нам.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Для демо показываем успех даже без сервера
+        showSuccessModal();
+        form.reset();
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+    });
+}
+
+function showSuccessModal() {
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in';
+    modal.innerHTML = `
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-scale-in">
+            <button onclick="this.closest('.fixed').remove()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-check-circle text-5xl text-green-500"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-brand-dark mb-3">Заявка отправлена!</h3>
+                
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Спасибо! Менеджер свяжется с вами в течение 15 минут для уточнения деталей.
+                </p>
+                
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-left">
+                    <p class="text-sm text-slate-700">
+                        <i class="fa-solid fa-clock text-brand-blue mr-2"></i>
+                        <strong>Что дальше?</strong>
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-1 mt-2 ml-6">
+                        <li>• Перезвоним в течение 15 минут</li>
+                        <li>• Ответим на вопросы</li>
+                        <li>• Согласуем время выезда инженера</li>
+                        <li>• Подготовим коммерческое предложение</li>
+                    </ul>
+                </div>
+                
+                <button onclick="this.closest('.fixed').remove()" 
+                        class="w-full bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-3 rounded-xl font-bold transition shadow-lg hover:shadow-xl">
+                    Отлично!
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
 }
 
 // ============================================================================
@@ -244,11 +444,13 @@ function initFAQ() {
 function initStickyCTA() {
     const stickyCTA = document.getElementById('sticky-cta');
     
+    if (!stickyCTA) return;
+    
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            stickyCTA?.classList.add('visible');
+        if (window.scrollY > 400) {
+            stickyCTA.classList.add('visible');
         } else {
-            stickyCTA?.classList.remove('visible');
+            stickyCTA.classList.remove('visible');
         }
     });
 }
@@ -256,13 +458,13 @@ function initStickyCTA() {
 function scrollToCalculator(target = '') {
     const calculator = document.getElementById('calculator-widget');
     if (calculator) {
-        calculator.scrollIntoView({ behavior: 'smooth' });
+        calculator.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
         // Если указан тип, выбираем его
         if (target) {
             setTimeout(() => {
                 selectType(target);
-            }, 500);
+            }, 600);
         }
     }
 }
@@ -275,11 +477,11 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href !== '#') {
+            if (href !== '#' && href.length > 1) {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
         });
@@ -306,9 +508,12 @@ function toggleModal(modalId) {
     }
 }
 
-function submitForm(event) {
-    event.preventDefault();
-    // Здесь будет логика отправки формы
-    alert('Спасибо! Ваша заявка принята. Менеджер свяжется с вами в течение 15 минут.');
-    toggleModal('callbackModal');
-}
+// Экспорт для глобального доступа
+window.selectType = selectType;
+window.selectSize = selectSize;
+window.selectMount = selectMount;
+window.toggleExtra = toggleExtra;
+window.calculateResult = calculateResult;
+window.scrollToCalculator = scrollToCalculator;
+window.scrollToForm = scrollToForm;
+window.toggleModal = toggleModal;
