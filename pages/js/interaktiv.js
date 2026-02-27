@@ -146,23 +146,23 @@ function showSizesForType(type) {
         console.error('sizes-container not found');
         return;
     }
-    
+
     let sizes = [];
     if (type === 'panel') sizes = ['55"', '65"', '75"', '86"'];
     else if (type === 'kiosk') sizes = ['32"', '43"', '55"'];
     else if (type === 'film') sizes = ['32"', '43"', '55"', '65"'];
     else if (type === 'frame') sizes = ['32"', '43"', '55"', '65"', '75"'];
-    
+
     console.log('Showing sizes for type:', type, sizes);
-    
+
     sizesContainer.innerHTML = sizes.map(size => `
-        <button onclick="selectSize('${size}')" 
+        <button onclick="selectSize(\\"${size}\\")" 
                 data-size="${size}"
                 class="size-option px-6 py-4 rounded-xl border-2 border-slate-300 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700 bg-white shadow-sm hover:shadow-md">
             ${size}
         </button>
     `).join('');
-    
+
     // Переходим к следующему шагу с небольшой задержкой
     setTimeout(() => goToStep(2), 400);
 }
