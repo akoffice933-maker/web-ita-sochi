@@ -992,9 +992,14 @@ function renderResults(result) {
     const coefficientsList = document.getElementById('coefficients-list');
     const appliedCoefficients = document.getElementById('applied-coefficients');
     
-    // Итоговая сумма
+    // Итоговая сумма (крупно, с анимацией)
     totalAmount.textContent = formatNumber(result.total_amount) + ' ₽';
-    totalBreakdown.textContent = `Материалы: ${formatNumber(result.total_materials)} ₽ | Работы: ${formatNumber(result.total_works)} ₽${result.fixed_amount > 0 ? ` | Наценка: ${formatNumber(result.fixed_amount)} ₽` : ''}`;
+    totalAmount.classList.add('total-amount-glow');
+    totalBreakdown.innerHTML = `
+        <span class="text-brand-blue"><i class="fa-solid fa-box mr-1"></i>Материалы: ${formatNumber(result.total_materials)} ₽</span> · 
+        <span class="text-brand-orange"><i class="fa-solid fa-tools mr-1"></i>Работы: ${formatNumber(result.total_works)} ₽</span>
+        ${result.fixed_amount > 0 ? `· <span class="text-slate-500"><i class="fa-solid fa-plus mr-1"></i>Наценка: ${formatNumber(result.fixed_amount)} ₽</span>` : ''}
+    `;
     
     // Таблица материалов
     materialsTable.innerHTML = result.materials.length > 0 ? result.materials.map(mat => `
@@ -1053,6 +1058,11 @@ async function exportPDF() {
         return;
     }
     
+    // Показываем модальное окно (демо-режим)
+    showExportModal('pdf');
+    
+    // Если бы был сервер:
+    /*
     try {
         const response = await fetch(`${API_BASE}/generate-pdf`, {
             method: 'POST',
@@ -1065,7 +1075,6 @@ async function exportPDF() {
         });
         
         if (response.ok) {
-            // Создаем blob и скачиваем файл
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1083,6 +1092,7 @@ async function exportPDF() {
         console.error('Error exporting PDF:', error);
         showError('Не удалось экспортировать в PDF. Проверьте подключение к интернету.');
     }
+    */
 }
 
 // ============================================================================
@@ -1094,6 +1104,11 @@ async function exportExcel() {
         return;
     }
     
+    // Показываем модальное окно (демо-режим)
+    showExportModal('excel');
+    
+    // Если бы был сервер:
+    /*
     try {
         const response = await fetch(`${API_BASE}/generate-excel`, {
             method: 'POST',
@@ -1106,7 +1121,6 @@ async function exportExcel() {
         });
         
         if (response.ok) {
-            // Создаем blob и скачиваем файл
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1124,6 +1138,72 @@ async function exportExcel() {
         console.error('Error exporting Excel:', error);
         showError('Не удалось экспортировать в Excel. Проверьте подключение к интернету.');
     }
+    */
+}
+
+// ============================================================================
+// Модальное окно экспорта (демо-режим)
+// ============================================================================
+function showExportModal(type) {
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in';
+    modal.innerHTML = `
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-scale-in">
+            <button onclick="this.closest('.fixed').remove()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            
+            <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-${type === 'pdf' ? 'file-pdf text-red-500' : 'file-excel text-green-500'} text-3xl"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-brand-dark mb-3">
+                    Экспорт в ${type === 'pdf' ? 'PDF' : 'Excel'}
+                </h3>
+                
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Эта функция доступна в <strong>полной версии</strong> на рабочем сервере.
+                </p>
+                
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-left">
+                    <p class="text-sm text-slate-700 mb-2">
+                        <i class="fa-solid fa-circle-info text-brand-blue mr-2"></i>
+                        <strong>Что будет в полной версии:</strong>
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-1 ml-6">
+                        <li>• Профессиональный формат документа</li>
+                        <li>• Логотип и контакты компании</li>
+                        <li>• Детализация материалов и работ</li>
+                        <li>• Примененные коэффициенты</li>
+                        <li>• Срок действия сметы (14 дней)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-brand-orange/10 to-brand-blue/10 rounded-xl p-4 mb-6">
+                    <p class="text-sm text-slate-700">
+                        <i class="fa-solid fa-phone text-brand-orange mr-2"></i>
+                        <strong>Нужна смета прямо сейчас?</strong>
+                    </p>
+                    <p class="text-sm text-slate-600 mt-2">
+                        Покажите эту страницу менеджеру — он подготовит точную смету за 15 минут!
+                    </p>
+                </div>
+                
+                <div class="flex flex-col gap-3">
+                    <a href="tel:+79882340095" class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-3 rounded-xl font-bold transition shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+7 (988) 234-00-95</span>
+                    </a>
+                    <button onclick="this.closest('.fixed').remove()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl font-semibold transition">
+                        Закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
 }
 
 // ============================================================================
