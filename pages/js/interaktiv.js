@@ -162,7 +162,8 @@ function showSizesForType(type) {
         btn.className = 'size-option px-6 py-4 rounded-xl border-2 border-slate-300 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700 bg-white shadow-sm hover:shadow-md';
         btn.setAttribute('data-size', size);
         btn.textContent = size;
-        btn.onclick = function() { selectSizeInternal(size); };
+        // Используем window.selectSize вместо selectSizeInternal
+        btn.onclick = function() { window.selectSize(size); };
         sizesContainer.appendChild(btn);
     });
 
