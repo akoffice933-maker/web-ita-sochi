@@ -228,39 +228,53 @@ function toggleExtraInternal(extra) {
 }
 
 function calculateResultInternal() {
+    console.log('=== calculateResult called ===');
+    console.log('Current data:', calculatorData);
+    
     // Валидация
     if (!calculatorData.type || !calculatorData.size) {
+        console.error('Validation failed: type or size missing');
         alert('Пожалуйста, выберите тип оборудования и размер');
         goToStep(1);
         return;
     }
+
+    console.log('Validation passed');
     
     // Переходим к шагу 4
     goToStep(4);
-    
+
     // Расчет
     let basePrice = 0;
-    
+
     if (calculatorData.type && calculatorData.size) {
         basePrice = PRICES[calculatorData.type]?.[calculatorData.size] || 0;
     }
     
+    console.log('Base price:', basePrice, 'Type:', calculatorData.type, 'Size:', calculatorData.size);
+
     // Монтаж
     let mountPrice = 0;
     if (calculatorData.mount !== 'no') {
         mountPrice = basePrice * MOUNT_MULTIPLIERS[calculatorData.mount];
     }
     
+    console.log('Mount price:', mountPrice, 'Mount type:', calculatorData.mount);
+
     // Дополнительные опции
     let extrasPrice = 0;
     calculatorData.extras.forEach(extra => {
         extrasPrice += PRICES.peripherals?.[extra] || 0;
     });
     
+    console.log('Extras price:', extrasPrice, 'Extras:', calculatorData.extras);
+
     const totalPrice = basePrice + mountPrice + extrasPrice;
     const minPrice = Math.round(totalPrice * 0.95 / 1000) * 1000;
     const maxPrice = Math.round(totalPrice * 1.15 / 1000) * 1000;
     
+    console.log('Total:', totalPrice, 'Min:', minPrice, 'Max:', maxPrice);
+
     // Формируем название типа оборудования
     const typeNames = {
         panel: 'Интерактивная панель',
@@ -268,10 +282,11 @@ function calculateResultInternal() {
         film: 'Сенсорная плёнка',
         frame: 'IR-рамка'
     };
-    
+
     // Отображение результата
     const resultContainer = document.getElementById('calculator-result');
     if (resultContainer) {
+        console.log('Result container found, updating...');
         resultContainer.innerHTML = `
             <div class="result-card bg-gradient-to-br from-brand-blue to-brand-dark text-white rounded-2xl p-6 md:p-8 shadow-xl">
                 <div class="text-center mb-6">
@@ -327,10 +342,14 @@ function calculateResultInternal() {
             </div>
         `;
         
+        console.log('Result container updated');
+        
         // Прокрутка к результату
         setTimeout(() => {
             resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
+    } else {
+        console.error('Result container NOT found!');
     }
 }
 
