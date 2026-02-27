@@ -155,13 +155,16 @@ function showSizesForType(type) {
 
     console.log('Showing sizes for type:', type, sizes);
 
-    sizesContainer.innerHTML = sizes.map(size => `
-        <button onclick="selectSize(\\"${size}\\")" 
-                data-size="${size}"
-                class="size-option px-6 py-4 rounded-xl border-2 border-slate-300 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700 bg-white shadow-sm hover:shadow-md">
-            ${size}
-        </button>
-    `).join('');
+    // Создаем кнопки через createElement для надежности
+    sizesContainer.innerHTML = '';
+    sizes.forEach(size => {
+        const btn = document.createElement('button');
+        btn.className = 'size-option px-6 py-4 rounded-xl border-2 border-slate-300 hover:border-brand-blue hover:bg-blue-50 transition font-semibold text-slate-700 bg-white shadow-sm hover:shadow-md';
+        btn.setAttribute('data-size', size);
+        btn.textContent = size;
+        btn.onclick = function() { selectSizeInternal(size); };
+        sizesContainer.appendChild(btn);
+    });
 
     // Переходим к следующему шагу с небольшой задержкой
     setTimeout(() => goToStep(2), 400);
