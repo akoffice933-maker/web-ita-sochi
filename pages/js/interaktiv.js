@@ -222,7 +222,17 @@ function initFAQ() {
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', function() {
             const item = this.closest('.faq-item');
-            item.classList.toggle('active');
+            const isActive = item.classList.contains('active');
+            
+            // Закрываем все остальные
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Если не был активен, открываем
+            if (!isActive) {
+                item.classList.add('active');
+            }
         });
     });
 }

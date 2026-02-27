@@ -90,8 +90,9 @@
 
         <!-- 1. Hero Block -->
         <section class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-brand-dark via-brand-blue to-blue-600 overflow-hidden">
-            <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-20"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-dark/90 via-brand-blue/85 to-blue-600/80"></div>
             
             <!-- Animated Circles -->
             <div class="absolute top-20 right-20 w-72 h-72 bg-brand-orange/20 rounded-full blur-3xl animate-pulse"></div>
@@ -117,19 +118,19 @@
 
                     <!-- Advantages -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 animate-fade-in-up" style="animation-delay: 0.3s">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:bg-white/15 transition">
                             <i class="fa-solid fa-percent text-3xl md:text-4xl text-brand-orange mb-3"></i>
                             <p class="text-sm md:text-base font-semibold">Цены на 20–40% ниже</p>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:bg-white/15 transition">
                             <i class="fa-solid fa-car text-3xl md:text-4xl text-green-400 mb-3"></i>
                             <p class="text-sm md:text-base font-semibold">Бесплатный выезд</p>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:bg-white/15 transition">
                             <i class="fa-solid fa-tools text-3xl md:text-4xl text-blue-400 mb-3"></i>
                             <p class="text-sm md:text-base font-semibold">Монтаж под ключ</p>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:bg-white/15 transition">
                             <i class="fa-solid fa-shield-halved text-3xl md:text-4xl text-purple-400 mb-3"></i>
                             <p class="text-sm md:text-base font-semibold">Гарантия до 36 мес</p>
                         </div>
@@ -155,26 +156,32 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-6xl mx-auto">
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-check-to-slot text-4xl text-brand-blue mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-brand-blue mb-2">>150</div>
                         <p class="text-sm text-slate-600">Внедрений в Краснодарском крае</p>
                     </div>
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-hourglass-half text-4xl text-brand-orange mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-brand-orange mb-2">7+</div>
                         <p class="text-sm text-slate-600">Лет средний срок службы</p>
                     </div>
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-face-smile text-4xl text-green-600 mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-green-600 mb-2">100%</div>
                         <p class="text-sm text-slate-600">Довольных клиентов</p>
                     </div>
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-medal text-4xl text-purple-600 mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-purple-600 mb-2">36</div>
                         <p class="text-sm text-slate-600">Месяцев гарантия</p>
                     </div>
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-car-side text-4xl text-brand-dark mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-2">24</div>
                         <p class="text-sm text-slate-600">Часа на выезд инженера</p>
                     </div>
                     <div class="stat-card bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2">
+                        <i class="fa-solid fa-award text-4xl text-blue-600 mb-3"></i>
                         <div class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">15+</div>
                         <p class="text-sm text-slate-600">Лет опыта команды</p>
                     </div>
@@ -194,9 +201,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Product Card 1 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-tv text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop" alt="Интерактивная панель" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Интерактивная панель 65–86"</h3>
@@ -212,9 +219,9 @@
 
                     <!-- Product Card 2 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-film text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="Сенсорная плёнка" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Сенсорная плёнка</h3>
@@ -230,9 +237,9 @@
 
                     <!-- Product Card 3 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-border-all text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop" alt="Сенсорная рамка" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Сенсорная IR-рамка 32–86"</h3>
@@ -248,9 +255,9 @@
 
                     <!-- Product Card 4 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-circle-info text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop" alt="Киоск самообслуживания" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Киоск самообслуживания</h3>
@@ -266,9 +273,9 @@
 
                     <!-- Product Card 5 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-stand text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&h=400&fit=crop" alt="Стойки и кронштейны" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Стойки и кронштейны</h3>
@@ -284,9 +291,9 @@
 
                     <!-- Product Card 6 -->
                     <div class="product-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
-                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition"></div>
-                            <i class="fa-solid fa-microphone text-6xl text-slate-400 group-hover:scale-110 transition duration-300"></i>
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=600&h=400&fit=crop" alt="Периферия и ПО" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Периферия и ПО</h3>
@@ -445,7 +452,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Solution 1 -->
                     <div class="solution-card bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg border-2 border-brand-blue/20 overflow-hidden hover:shadow-xl transition">
-                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 text-center">
+                        <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-dark flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=300&fit=crop" alt="Цифровой класс" class="w-full h-full object-cover opacity-50">
+                            <i class="fa-solid fa-chalkboard-user text-5xl text-white absolute"></i>
+                        </div>
+                        <div class="bg-gradient-to-r from-brand-blue to-brand-dark text-white p-4 text-center -mt-12 relative z-10 mx-4 rounded-xl shadow-lg">
                             <h3 class="text-xl font-bold">Цифровой класс</h3>
                         </div>
                         <div class="p-6">
@@ -476,7 +487,11 @@
 
                     <!-- Solution 2 -->
                     <div class="solution-card bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-lg border-2 border-brand-orange/20 overflow-hidden hover:shadow-xl transition">
-                        <div class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white p-4 text-center">
+                        <div class="h-48 bg-gradient-to-br from-brand-orange to-brand-orangeHover flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=300&fit=crop" alt="Информационный киоск" class="w-full h-full object-cover opacity-50">
+                            <i class="fa-solid fa-circle-info text-5xl text-white absolute"></i>
+                        </div>
+                        <div class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white p-4 text-center -mt-12 relative z-10 mx-4 rounded-xl shadow-lg">
                             <h3 class="text-xl font-bold">Информационный киоск</h3>
                         </div>
                         <div class="p-6">
@@ -507,7 +522,11 @@
 
                     <!-- Solution 3 -->
                     <div class="solution-card bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-lg border-2 border-purple-500/20 overflow-hidden hover:shadow-xl transition">
-                        <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-4 text-center">
+                        <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=300&fit=crop" alt="Премиум-переговорная" class="w-full h-full object-cover opacity-50">
+                            <i class="fa-solid fa-comments text-5xl text-white absolute"></i>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-4 text-center -mt-12 relative z-10 mx-4 rounded-xl shadow-lg">
                             <h3 class="text-xl font-bold">Премиум-переговорная</h3>
                         </div>
                         <div class="p-6">
@@ -549,7 +568,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-users text-brand-blue text-xl"></i>
                         </div>
@@ -559,7 +578,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-file-invoice text-green-600 text-xl"></i>
                         </div>
@@ -569,7 +588,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-car text-brand-orange text-xl"></i>
                         </div>
@@ -579,7 +598,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-link text-purple-600 text-xl"></i>
                         </div>
@@ -589,7 +608,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-clock text-blue-600 text-xl"></i>
                         </div>
@@ -599,7 +618,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 p-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                         <div class="w-12 h-12 bg-slate-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-headset text-slate-600 text-xl"></i>
                         </div>
@@ -623,9 +642,13 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Case 1 -->
-                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                        <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                            <i class="fa-solid fa-school text-6xl text-slate-400"></i>
+                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                        <div class="h-56 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop" alt="Школа" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <i class="fa-solid fa-school text-3xl mb-2"></i>
+                            </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Школа №XX, Сочи</h3>
@@ -638,9 +661,13 @@
                     </div>
 
                     <!-- Case 2 -->
-                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                        <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                            <i class="fa-solid fa-building text-6xl text-slate-400"></i>
+                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                        <div class="h-56 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Офис" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <i class="fa-solid fa-building text-3xl mb-2"></i>
+                            </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Офис компании, Краснодар</h3>
@@ -653,9 +680,13 @@
                     </div>
 
                     <!-- Case 3 -->
-                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                        <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                            <i class="fa-solid fa-hospital text-6xl text-slate-400"></i>
+                    <div class="case-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                        <div class="h-56 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop" alt="Клиника" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <i class="fa-solid fa-hospital text-3xl mb-2"></i>
+                            </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Клиника, Сочи</h3>
