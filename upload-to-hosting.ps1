@@ -5,10 +5,10 @@
 
 $ftpServer = "ftp://school-board.online/"
 $ftpUsername = "infoitaso3_board"
-$ftpPassword = "ВАШ_ПАРОЛЬ"  # ← ВВЕДИТЕ ВАШ ПАРОЛЬ ЗДЕСЬ
+$ftpPassword = "HGKHGJFGasadsdf12##"  # Ваш пароль
 
 $localPath = "d:\web ita-sochi"
-$remotePath = "/public_html/"
+$remotePath = "/"
 
 # ==================== ФУНКЦИИ ====================
 
@@ -32,26 +32,10 @@ function Upload-File {
         $requestStream.Write($fileContent, 0, $fileContent.Length)
         $requestStream.Close()
         
-        Write-Host "✓ Загружено: $remoteFile" -ForegroundColor Green
+        Write-Host "OK: $remoteFile" -ForegroundColor Green
     }
     catch {
-        Write-Host "✗ Ошибка загрузки $remoteFile : $($_.Exception.Message)" -ForegroundColor Red
-    }
-}
-
-function Upload-Directory {
-    param (
-        [string]$localDir,
-        [string]$remoteDir
-    )
-    
-    # Создаем директорию на сервере (если нужно)
-    Write-Host "Создание директории: $remoteDir" -ForegroundColor Yellow
-    
-    # Загружаем файлы из директории
-    Get-ChildItem -Path $localDir -File | ForEach-Object {
-        $remoteFile = "$remoteDir$($_.Name)"
-        Upload-File -localFile $_.FullName -remoteFile $remoteFile
+        Write-Host "ERROR: $remoteFile - $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
@@ -61,9 +45,9 @@ Write-Host "==================================" -ForegroundColor Cyan
 Write-Host "ЗАГРУЗКА САЙТА НА ХОСТИНГ" -ForegroundColor Cyan
 Write-Host "==================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "Сервер: $ftpServer" -ForegroundColor White
-Write-Host "Пользователь: $ftpUsername" -ForegroundColor White
-Write-Host "Локальная папка: $localPath" -ForegroundColor White
+Write-Host "Сервер: $ftpServer"
+Write-Host "Пользователь: $ftpUsername"
+Write-Host "Папка: $localPath"
 Write-Host ""
 
 # Проверка подключения
@@ -73,57 +57,55 @@ try {
     $testRequest.Method = [System.Net.WebRequestMethods+Ftp]::ListDirectory
     $testRequest.Credentials = New-Object System.Net.NetworkCredential($ftpUsername, $ftpPassword)
     $testResponse = $testRequest.GetResponse()
-    Write-Host "✓ Подключение успешно!" -ForegroundColor Green
+    Write-Host "OK: Подключение успешно!" -ForegroundColor Green
     $testResponse.Close()
 }
 catch {
-    Write-Host "✗ Ошибка подключения: $($_.Exception.Message)" -ForegroundColor Red
-    Write-Host "Проверьте логин, пароль и доступность сервера" -ForegroundColor Yellow
+    Write-Host "ERROR: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "Проверьте логин, пароль и интернет" -ForegroundColor Yellow
     Read-Host "Нажмите Enter для выхода"
     exit
 }
 
 Write-Host ""
-Write-Host "==================================" -ForegroundColor Cyan
-Write-Host "НАЧАЛО ЗАГРУЗКИ ФАЙЛОВ" -ForegroundColor Cyan
-Write-Host "==================================" -ForegroundColor Cyan
+Write-Host "НАЧАЛО ЗАГРУЗКИ..." -ForegroundColor Cyan
 Write-Host ""
 
 # Загрузка основных файлов
-Write-Host "Загрузка основных файлов..." -ForegroundColor Yellow
-$rootFiles = @(
+Write-Host "Загрузка файлов..." -ForegroundColor Yellow
+$files = @(
     "index.html",
     ".htaccess",
     "favicon.svg",
     "robots.txt",
     "sitemap.xml",
     "submit.php",
-    "privacy-policy.html",
-    "README.md"
+    "privacy-policy.html"
 )
 
-foreach ($file in $rootFiles) {
+foreach ($file in $files) {
     $localFile = Join-Path $localPath $file
     if (Test-Path $localFile) {
         Upload-File -localFile $localFile -remoteFile "$remotePath$file"
     }
 }
 
+# Загрузка папок
 Write-Host ""
-Write-Host "Загрузка папки css/..." -ForegroundColor Yellow
-Upload-Directory -localDir "$localPath\css" -remoteDir "$remotePath/css/"
+Write-Host "Загрузка папок..." -ForegroundColor Yellow
 
-Write-Host "Загрузка папки js/..." -ForegroundColor Yellow
-Upload-Directory -localDir "$localPath\js" -remoteDir "$remotePath/js/"
+$folders = @("css", "js", "images", "pages", "calculator", "videos", "logs")
 
-Write-Host "Загрузка папки images/..." -ForegroundColor Yellow
-Upload-Directory -localDir "$localPath\images" -remoteDir "$remotePath/images/"
-
-Write-Host "Загрузка папки pages/..." -ForegroundColor Yellow
-Upload-Directory -localDir "$localPath\pages" -remoteDir "$remotePath/pages/"
-
-Write-Host "Загрузка папки calculator/..." -ForegroundColor Yellow
-Upload-Directory -localDir "$localPath\calculator" -remoteDir "$remotePath/calculator/"
+foreach ($folder in $folders) {
+    $localFolder = Join-Path $localPath $folder
+    if (Test-Path $localFolder) {
+        Write-Host "Папка: $folder/" -ForegroundColor Cyan
+        Get-ChildItem -Path $localFolder -File -Recurse | ForEach-Object {
+            $relativePath = $_.FullName.Replace($localPath, "").Replace("\", "/")
+            Upload-File -localFile $_.FullName -remoteFile "$remotePath$relativePath"
+        }
+    }
+}
 
 Write-Host ""
 Write-Host "==================================" -ForegroundColor Green
@@ -133,6 +115,8 @@ Write-Host ""
 Write-Host "Проверьте сайт:" -ForegroundColor Cyan
 Write-Host "https://school-board.online/" -ForegroundColor White
 Write-Host "https://school-board.online/calculator/" -ForegroundColor White
+Write-Host ""
+Write-Host "Если есть ошибки - проверьте логи выше" -ForegroundColor Yellow
 Write-Host ""
 
 Read-Host "Нажмите Enter для выхода"

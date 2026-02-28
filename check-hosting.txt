@@ -1,0 +1,10 @@
+open ftp://infoitaso3_board:HGKHGJFGasadsdf12##@school-board.online/
+option batch abort
+option confirm off
+ls /
+ls /calculator/
+ls /pages/
+ls /css/
+ls /js/
+ls /images/
+exit

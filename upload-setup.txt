@@ -1,0 +1,5 @@
+open ftp://infoitaso3_board:HGKHGJFGasadsdf12##@school-board.online/
+option batch abort
+option confirm off
+put "d:\web ita-sochi\simple-setup.php" /simple-setup.php
+exit

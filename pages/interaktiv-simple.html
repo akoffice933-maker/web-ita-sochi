@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивные решения - ИТА Сочи</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0066cc',
+                            dark: '#003087',
+                            light: '#f0f7ff',
+                            orange: '#ff7a00',
+                            orangeHover: '#e65c00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <img src="../images/logo.jpg" alt="ИТА Сочи" class="w-12 h-12 object-contain">
+                <div>
+                    <div class="text-lg font-bold text-brand-dark">ИТА</div>
+                    <div class="text-xs text-slate-500 uppercase">Сочи</div>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-4">
+                <a href="../index.html" class="text-slate-600 hover:text-brand-blue">Главная</a>
+                <a href="../calculator/" class="text-slate-600 hover:text-brand-blue">Калькулятор</a>
+                <a href="interaktiv.html" class="text-brand-orange font-semibold">Интерактивные решения</a>
+                <a href="../pages/contacts.html" class="text-slate-600 hover:text-brand-blue">Контакты</a>
+            </nav>
+            
+            <a href="tel:+79882340095" class="text-brand-dark font-bold">
+                <i class="fa-solid fa-phone text-brand-orange mr-2"></i>
+                +7 (988) 234-00-95
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- Hero -->
+        <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-blue-600 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+                    Интерактивные панели в Сочи
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Поставка, монтаж и настройка интерактивного оборудования для школ, офисов и бизнеса
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <div class="bg-white/10 backdrop-blur px-6 py-3 rounded-xl">
+                        <i class="fa-solid fa-percent text-2xl text-brand-orange mb-2"></i>
+                        <p class="font-semibold">Цены на 20-40% ниже</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur px-6 py-3 rounded-xl">
+                        <i class="fa-solid fa-car text-2xl text-green-400 mb-2"></i>
+                        <p class="font-semibold">Бесплатный выезд</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur px-6 py-3 rounded-xl">
+                        <i class="fa-solid fa-shield-halved text-2xl text-purple-400 mb-2"></i>
+                        <p class="font-semibold">Гарантия до 36 мес</p>
+                    </div>
+                </div>
+                <a href="#products" class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition">
+                    Смотреть каталог
+                </a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark text-center mb-12">Каталог оборудования</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                            <i class="fa-solid fa-tv text-6xl text-brand-blue"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Интерактивная панель 65-86"</h3>
+                            <p class="text-slate-600 text-sm mb-4">Android/Windows, 4K Ultra HD, антибликовое покрытие</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-orange font-bold text-lg">от 85 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold hover:underline">
+                                    Рассчитать →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                            <i class="fa-solid fa-circle-info text-6xl text-brand-blue"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Киоск самообслуживания</h3>
+                            <p class="text-slate-600 text-sm mb-4">Напольный/настенный, 32-55", ПО для навигации</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-orange font-bold text-lg">от 95 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold hover:underline">
+                                    Рассчитать →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                            <i class="fa-solid fa-film text-6xl text-brand-blue"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Сенсорная плёнка</h3>
+                            <p class="text-slate-600 text-sm mb-4">На любой монитор или стекло, превращает в интерактивный</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-orange font-bold text-lg">от 25 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold hover:underline">
+                                    Рассчитать →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Link -->
+        <section class="py-16 bg-gradient-to-br from-brand-light to-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Рассчитать стоимость</h2>
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                    Воспользуйтесь нашим онлайн-калькулятором для расчёта стоимости оборудования и монтажа
+                </p>
+                <a href="../calculator/" class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition inline-flex items-center gap-2">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Перейти к калькулятору</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <img src="../images/logo.jpg" alt="ИТА Сочи" class="w-10 h-10 object-contain bg-white rounded-full p-1">
+                <div>
+                    <div class="font-bold">ИТА Сочи</div>
+                    <div class="text-xs text-slate-300">Системный интегратор</div>
+                </div>
+            </div>
+            <div class="text-sm text-slate-300">
+                <p><i class="fa-solid fa-phone mr-2"></i>+7 (988) 234-00-95</p>
+                <p><i class="fa-solid fa-envelope mr-2"></i>info@ita-sochi.ru</p>
+                <p><i class="fa-solid fa-location-dot mr-2"></i>г. Сочи, ул. Севастопольская, 25, офис 304</p>
+            </div>
+            <div class="border-t border-slate-700 mt-6 pt-6 text-xs text-slate-400">
+                <p>&copy; 2011-2026 ИТА Сочи. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

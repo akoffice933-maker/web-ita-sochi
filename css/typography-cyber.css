@@ -1,0 +1,519 @@
+/**
+ * Типографика в стиле cyber-tronic.ru
+ * Для сайта ИТА Сочи
+ * 
+ * Шрифты: Inter (текст) + Manrope (заголовки)
+ */
+
+/* -------------------------------------------- */
+/* 1. Подключение шрифтов (добавить в <head>) */
+/* -------------------------------------------- */
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+*/
+
+/* -------------------------------------------- */
+/* 2. CSS Переменные */
+/* -------------------------------------------- */
+:root {
+  /* Шрифты */
+  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Цвета текста в стиле cyber-tronic */
+  --color-text-body: #1e293b;      /* Тёмно-серый для основного текста */
+  --color-text-heading: #0f172a;    /* Почти черный для заголовков */
+  --color-text-secondary: #64748b;  /* Серый для второстепенного текста */
+  --color-accent: #2563eb;          /* Акцентный синий */
+  --color-accent-hover: #1d4ed8;    /* Синий при наведении */
+  
+  /* Размеры */
+  --font-size-base: 1.05rem;        /* ~16.8px */
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+}
+
+/* -------------------------------------------- */
+/* 3. Базовые стили (Body) */
+/* -------------------------------------------- */
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------- */
+/* 4. Заголовки */
+/* -------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: var(--line-height-heading);
+  color: var(--color-text-heading);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+/* H1 - Hero заголовки */
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* H2 - Заголовки разделов */
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* H3 - Заголовки карточек */
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+}
+
+/* H4 - Подзаголовки */
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+}
+
+/* H5, H6 - Мелкие заголовки */
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* -------------------------------------------- */
+/* 5. Текст и параграфы */
+/* -------------------------------------------- */
+p {
+  font-size: 1.075rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-body);
+}
+
+/* Второстепенный текст */
+.text-secondary, .text-muted {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Выделенный текст */
+strong, b {
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+/* Ссылки в тексте */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* -------------------------------------------- */
+/* 6. Кнопки */
+/* -------------------------------------------- */
+button, .btn, a.btn, .button {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Primary кнопка */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  text-decoration: none;
+}
+
+/* Secondary кнопка */
+.btn-secondary {
+  background: white;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+}
+
+/* -------------------------------------------- */
+/* 7. Цены и цифры */
+/* -------------------------------------------- */
+.price, .product-price, .big-number, .stat-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--color-accent);
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+/* Маленькая цена (в карточках) */
+.price-sm {
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 700;
+}
+
+/* Большая цена (в итогах) */
+.price-lg {
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* -------------------------------------------- */
+/* 8. Карточки товаров/услуг */
+/* -------------------------------------------- */
+.card, .service-card, .product-card {
+  font-family: var(--font-primary);
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover, .service-card:hover, .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+  border-color: var(--color-accent);
+}
+
+.card-title, .service-card h3, .product-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-heading);
+}
+
+.card-description, .service-card p, .product-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------- */
+/* 9. Навигация */
+/* -------------------------------------------- */
+.nav-link, .menu-item {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-body);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .menu-item:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Активная ссылка */
+.nav-link.active, .menu-item.active {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* -------------------------------------------- */
+/* 10. Формы */
+/* -------------------------------------------- */
+input, textarea, select {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-body);
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-heading);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* -------------------------------------------- */
+/* 11. Таблицы */
+/* -------------------------------------------- */
+table {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-heading);
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e2e8f0;
+  color: var(--color-text-body);
+}
+
+/* -------------------------------------------- */
+/* 12. Hero блок */
+/* -------------------------------------------- */
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: var(--font-primary);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* -------------------------------------------- */
+/* 13. Статистика */
+/* -------------------------------------------- */
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* -------------------------------------------- */
+/* 14. Адаптивность */
+/* -------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 1rem;
+    --line-height-body: 1.6;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+  
+  .price-lg {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  button, .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* 15. Утилиты */
+/* -------------------------------------------- */
+/* Жирный текст */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+/* Увеличенный текст */
+.text-lg {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Уменьшенный текст */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Выравнивание */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* -------------------------------------------- */
+/* 16. Анимации текста */
+/* -------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* -------------------------------------------- */
+/* 17. Особые стили для cyber-tronic */
+/* -------------------------------------------- */
+/* Градиентный текст для заголовков */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* Текст с тенью */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(15, 23, 42, 0.1);
+}
+
+/* -------------------------------------------- */
+/* 18. Калькулятор (специфичные стили) */
+/* -------------------------------------------- */
+.calc-result {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin: 1rem 0;
+}
+
+.calc-label {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

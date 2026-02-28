@@ -1,0 +1,4 @@
+open ftp://infoitaso3_board:HGKHGJFGasadsdf12##@school-board.online/
+mkdir /calculator
+put -r "d:\web ita-sochi\calculator\*" "/calculator/"
+exit

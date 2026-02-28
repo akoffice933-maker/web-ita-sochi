@@ -1,0 +1,7 @@
+open ftp://infoitaso3_board:HGKHGJFGasadsdf12##@school-board.online/
+option batch abort
+option confirm off
+cd /calculator
+lcd "d:\web ita-sochi\calculator"
+put *
+exit

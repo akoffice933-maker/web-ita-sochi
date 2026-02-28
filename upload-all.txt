@@ -1,0 +1,50 @@
+open ftp://infoitaso3_board:HGKHGJFGasadsdf12##@school-board.online/
+option batch abort
+option confirm off
+
+# Загрузка папки pages
+mkdir /pages
+cd /pages
+lcd "d:\web ita-sochi\pages"
+put *
+lcd "d:\web ita-sochi"
+
+# Загрузка папки css
+mkdir /css
+cd /css
+lcd "d:\web ita-sochi\css"
+put *
+lcd "d:\web ita-sochi"
+
+# Загрузка папки js
+mkdir /js
+cd /js
+lcd "d:\web ita-sochi\js"
+put *
+lcd "d:\web ita-sochi"
+
+# Загрузка папки images
+mkdir /images
+cd /images
+lcd "d:\web ita-sochi\images"
+put *
+lcd "d:\web ita-sochi"
+
+# Загрузка папки videos
+mkdir /videos
+cd /videos
+lcd "d:\web ita-sochi\videos"
+put *
+lcd "d:\web ita-sochi"
+
+# Загрузка корневых файлов
+lcd "d:\web ita-sochi"
+put .htaccess
+put favicon.svg
+put robots.txt
+put sitemap.xml
+put submit.php
+put privacy-policy.html
+put README.md
+
+exit
