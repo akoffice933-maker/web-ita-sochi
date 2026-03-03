@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивные решения - ИТА Сочи</title>
+    <meta name="description" content="Интерактивные панели, киоски, сенсорные экраны для школ, офисов и бизнеса в Сочи">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/typography-cyber.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0066cc',
+                            dark: '#003087',
+                            light: '#f0f7ff',
+                            orange: '#ff7a00',
+                            orangeHover: '#e65c00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-lg border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-3 p-2 group">
+                <img src="../images/logo.jpg" alt="ИТА Сочи" class="w-10 h-10 md:w-12 md:h-12 object-contain flex-shrink-0">
+                <div class="flex flex-col">
+                    <span class="text-lg md:text-xl font-bold text-brand-dark leading-none">ИТА</span>
+                    <span class="text-xs text-slate-500 font-medium tracking-widest uppercase">Сочи</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-1 font-medium">
+                <a href="../index.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Главная</a>
+                <a href="../index.html#services" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Услуги</a>
+                <a href="../calculator/" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Калькулятор</a>
+                <a href="interaktiv.html" class="px-4 py-2 text-brand-orange bg-orange-50 rounded-lg transition font-semibold">Интерактивные решения</a>
+                <a href="../pages/contacts.html" class="px-4 py-2 text-slate-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition">Контакты</a>
+            </nav>
+            
+            <div class="flex items-center gap-3">
+                <a href="tel:+79882340095" class="hidden sm:flex items-center gap-2 text-brand-dark font-bold hover:text-brand-blue transition">
+                    <i class="fa-solid fa-phone text-brand-orange text-sm"></i>
+                    <span class="text-sm">+7 (988) 234-00-95</span>
+                </a>
+                <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm">
+                    Заказать звонок
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center bg-gradient-to-br from-slate-900 via-brand-dark to-brand-blue overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-20"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-brand-dark/85 to-brand-blue/80"></div>
+            
+            <div class="container mx-auto px-4 relative z-10 py-20">
+                <div class="max-w-6xl mx-auto text-center text-white">
+                    <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
+                        <i class="fa-solid fa-check-circle text-green-400"></i>
+                        <span class="text-white font-medium">Работаем в Сочи и Краснодарском крае</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
+                        Интерактивные панели и сенсорные решения <span class="text-brand-orange">под ключ</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s">
+                        Поставка, монтаж и настройка интерактивного оборудования для школ, офисов, клиник и торговых центров
+                    </p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-in-up" style="animation-delay: 0.3s">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                            <i class="fa-solid fa-percent text-3xl text-brand-orange mb-3"></i>
+                            <p class="font-semibold">Цены на 20-40% ниже</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                            <i class="fa-solid fa-car text-3xl text-green-400 mb-3"></i>
+                            <p class="font-semibold">Бесплатный выезд</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                            <i class="fa-solid fa-tools text-3xl text-blue-400 mb-3"></i>
+                            <p class="font-semibold">Монтаж под ключ</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20">
+                            <i class="fa-solid fa-shield-halved text-3xl text-purple-400 mb-3"></i>
+                            <p class="font-semibold">Гарантия до 36 мес</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s">
+                        <a href="#products" class="bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-catalog"></i>
+                            <span>Смотреть каталог</span>
+                        </a>
+                        <a href="../calculator/" class="bg-white/15 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition hover:bg-white/25 inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Рассчитать стоимость</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-fade-in-up">
+                    <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider">Каталог</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mt-3 mb-4">Что мы предлагаем</h2>
+                    <div class="w-24 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Product 1: Интерактивная панель -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop" 
+                                 alt="Интерактивная панель" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Интерактивная панель 65-86"</h3>
+                            <p class="text-slate-600 text-sm mb-4">Android/Windows в комплекте. 4K Ultra HD, антибликовое покрытие, встроенный ПК.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 85 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Киоск самообслуживания -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop" 
+                                 alt="Киоск самообслуживания" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Киоск самообслуживания</h3>
+                            <p class="text-slate-600 text-sm mb-4">Напольный/настенный 32-55". Предустановленное ПО для навигации и расписания.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 95 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Сенсорная плёнка -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop" 
+                                 alt="Сенсорная плёнка" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Сенсорная плёнка</h3>
+                            <p class="text-slate-600 text-sm mb-4">На любой монитор или стекло. Превращает обычную поверхность в интерактивную.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 25 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: IR-рамка -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop" 
+                                 alt="IR-рамка" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Сенсорная IR-рамка</h3>
+                            <p class="text-slate-600 text-sm mb-4">Инфракрасная рамка 32-86". 10 касаний одновременно для любого телевизора.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 35 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: Стойки и крепления -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop" 
+                                 alt="Стойки и крепления" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Стойки и крепления</h3>
+                            <p class="text-slate-600 text-sm mb-4">Напольные передвижные, настенные, потолочные крепления для панелей.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 15 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: Периферия и ПО -->
+                    <div class="service-card bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 group">
+                        <div class="h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=800&h=600&fit=crop" 
+                                 alt="Периферия и ПО" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Периферия и ПО</h3>
+                            <p class="text-slate-600 text-sm mb-4">Беспроводные микрофоны, спикерфоны, веб-камеры, лицензии на ПО.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-brand-orange font-bold text-lg">от 8 000 ₽</span>
+                                <a href="../calculator/" class="text-brand-blue font-semibold text-sm hover:text-brand-dark transition">
+                                    Рассчитать <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-brand-light to-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-fade-in-up">
+                    <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider">Калькулятор</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mt-3 mb-4">Рассчитать стоимость</h2>
+                    <div class="w-24 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full mb-6"></div>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                        Воспользуйтесь нашим онлайн-калькулятором для расчёта стоимости оборудования и монтажа
+                    </p>
+                </div>
+
+                <div class="text-center animate-fade-in-up" style="animation-delay: 0.2s">
+                    <a href="../calculator/" class="inline-flex items-center gap-3 bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <i class="fa-solid fa-calculator text-xl"></i>
+                        <span>Перейти к полному калькулятору смет</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <p class="text-sm text-slate-500 mt-4">
+                        <i class="fa-solid fa-circle-info mr-1"></i>
+                        6 шаблонов, коэффициенты, экспорт в PDF/Excel
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-fade-in-up">
+                    <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider">Преимущества</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mt-3 mb-4">Почему выбирают ИТА</h2>
+                    <div class="w-24 h-2 bg-gradient-to-r from-brand-blue to-brand-orange mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-users text-brand-blue text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Собственная монтажная служба</h3>
+                            <p class="text-sm text-slate-600">Не привлекаем субподрядчиков — контролируем качество</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-file-invoice text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Работа с НДС</h3>
+                            <p class="text-sm text-slate-600">Договоры, закрывающие акты, отсрочка платежа</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-car text-brand-orange text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Бесплатный выезд</h3>
+                            <p class="text-sm text-slate-600">Инженер приедет в день обращения с демонстрацией</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-link text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Интеграция с системами</h3>
+                            <p class="text-sm text-slate-600">СКС, СКУД, видеонаблюдение — всё в одном месте</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-clock text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Быстрые сроки</h3>
+                            <p class="text-sm text-slate-600">От замера до запуска 3-14 дней</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-slate-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-headset text-slate-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark mb-1">Поддержка 24/7</h3>
+                            <p class="text-sm text-slate-600">Постгарантийное обслуживание и консультации</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-brand-dark to-brand-blue text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 animate-fade-in-up">Остались вопросы?</h2>
+                <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.1s">
+                    Получите коммерческое предложение под вашу задачу в течение 2 часов
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.2s">
+                    <a href="tel:+79882340095" class="bg-white text-brand-dark px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+7 (988) 234-00-95</span>
+                    </a>
+                    <button onclick="toggleModal('callbackModal')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Заказать звонок</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 border-t border-slate-700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="../images/logo.jpg" alt="ИТА Сочи" class="w-10 h-10 object-contain bg-white rounded-full p-1">
+                    <div>
+                        <p class="font-bold">ИТА Сочи</p>
+                        <p class="text-xs text-slate-300">Системный интегратор</p>
+                    </div>
+                </div>
+                <div class="text-sm text-slate-300 text-center md:text-right">
+                    <p><i class="fa-solid fa-phone mr-2"></i>+7 (988) 234-00-95</p>
+                    <p><i class="fa-solid fa-envelope mr-2"></i>info@ita-sochi.ru</p>
+                    <p><i class="fa-solid fa-location-dot mr-2"></i>г. Сочи, ул. Севастопольская, 25, офис 304</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-6 pt-6 text-center text-xs text-slate-400">
+                <p>&copy; 2011-2026 ИТА Сочи. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Callback Modal -->
+    <div id="callbackModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-scale-in">
+            <button onclick="toggleModal('callbackModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-brand-dark mb-4">Заказать звонок</h3>
+            <p class="text-slate-600 mb-6">Оставьте номер — перезвоним в течение 15 минут</p>
+            <form class="space-y-4">
+                <input type="text" placeholder="Ваше имя" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                <input type="tel" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+                <button type="submit" class="w-full bg-gradient-to-r from-brand-orange to-brand-orangeHover text-white px-6 py-3 rounded-xl font-bold transition shadow-lg hover:shadow-xl">
+                    Жду звонка
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.toggle('hidden');
+        }
+
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо! Ваша заявка принята.');
+                toggleModal('callbackModal');
+            });
+        });
+    </script>
+</body>
+</html>

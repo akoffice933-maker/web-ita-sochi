@@ -399,8 +399,9 @@
     <section id="home" class="relative min-h-[95vh] flex items-center pt-20 overflow-hidden">
         <!-- Background with Gradient + Pattern -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-brand-dark to-brand-blue">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-10"></div>
             <!-- Animated Background Elements -->
-            <div class="absolute inset-0 bg-pattern opacity-10"></div>
             <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl animate-pulse"></div>
             <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
         </div>
@@ -479,81 +480,129 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-server"></i>
+                <!-- Service 1: СКС -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-02_17-52-12.jpg"
+                             alt="Монтаж СКС"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-server text-3xl mb-2"></i>
+                        </div>
                     </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Проектирование и монтаж структурированных кабельных систем. Сертификация Fluke.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">от 450 ₽ / точка</span>
-                        <a href="pages/uslugi.html#sks" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Прокладка оптоволокна, сварка, тестирование рефлектометром. Линии любой длины.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">По проекту</span>
-                        <a href="pages/uslugi.html#vols" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж СКС</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Проектирование и монтаж структурированных кабельных систем. Сертификация Fluke.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">от 450 ₽ / точка</span>
+                            <a href="pages/uslugi.html#sks" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-video"></i>
+                <!-- Service 2: ВОЛС -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-03_10-20-45.jpg"
+                             alt="Монтаж ВОЛС"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-globe text-3xl mb-2"></i>
+                        </div>
                     </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">IP и аналоговые системы. Удаленный доступ. Аналитика и распознавание лиц.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">от 3 500 ₽ / камера</span>
-                        <a href="pages/video-surveillance.html" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-id-card"></i>
-                    </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">СКУД</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Турникеты, шлагбаумы, биометрия, учет рабочего времени. Интеграция с 1С.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">По запросу</span>
-                        <a href="pages/uslugi.html#skud" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Монтаж ВОЛС</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Прокладка оптоволокна, сварка, тестирование рефлектометром. Линии любой длины.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">По проекту</span>
+                            <a href="pages/uslugi.html#vols" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Service 5 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-headset"></i>
+                <!-- Service 3: Видеонаблюдение -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-03_10-20-44.jpg"
+                             alt="Видеонаблюдение"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-video text-3xl mb-2"></i>
+                        </div>
                     </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Абонентское обслуживание офисов. Администрирование серверов, защита данных.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">от 15 000 ₽ / мес</span>
-                        <a href="pages/uslugi.html#it" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Видеонаблюдение</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">IP и аналоговые системы. Удаленный доступ. Аналитика и распознавание лиц.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">от 3 500 ₽ / камера</span>
+                            <a href="pages/video-surveillance.html" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Service 6 -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-6 group-hover:from-brand-blue group-hover:to-brand-dark group-hover:text-white transition-all">
-                        <i class="fa-solid fa-bolt"></i>
+                <!-- Service 4: СКУД -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-02_17-52-35.jpg"
+                             alt="СКУД"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-id-card text-3xl mb-2"></i>
+                        </div>
                     </div>
-                    <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
-                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">Монтаж щитового оборудования, освещение, розеточные группы. Допуски.</p>
-                    <div class="flex justify-between items-center border-t border-slate-100 pt-4">
-                        <span class="text-sm font-semibold text-brand-orange">По смете</span>
-                        <a href="pages/uslugi.html#electro" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">СКУД</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Турникеты, шлагбаумы, биометрия, учет рабочего времени. Интеграция с 1С.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">По запросу</span>
+                            <a href="pages/uslugi.html#skud" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: IT-аутсорсинг -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-02_17-52-30.jpg"
+                             alt="IT-аутсорсинг"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-headset text-3xl mb-2"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">IT-аутсорсинг</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Абонентское обслуживание офисов. Администрирование серверов, защита данных.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">от 15 000 ₽ / мес</span>
+                            <a href="pages/uslugi.html#it" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Электромонтаж -->
+                <div class="service-card bg-white p-0 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/photo_2026-03-02_17-52-22.jpg"
+                             alt="Электромонтаж"
+                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <i class="fa-solid fa-bolt text-3xl mb-2"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg md:text-2xl font-bold text-brand-dark mb-3">Электромонтаж</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Монтаж щитового оборудования, освещение, розеточные группы. Допуски.</p>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-4">
+                            <span class="text-sm font-semibold text-brand-orange">По смете</span>
+                            <a href="pages/uslugi.html#electro" class="text-brand-blue font-semibold text-sm hover:underline flex items-center gap-1">Подробнее <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -948,7 +997,7 @@
         <div class="projects-slider flex overflow-x-auto gap-4 md:p-6 px-4 pb-8 snap-x snap-mandatory scroll-smooth" style="scroll-behavior: smooth;">
             <!-- Project 1: FIFA 2018 -->
             <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="FIFA 2018 Стадион Фишт Сочи" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <img src="images/photo_2026-03-02_17-52-11.jpg" alt="FIFA 2018 Стадион Фишт Сочи" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2018</span>
                     <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">FIFA 2018, стадион «Фишт»</h3>
@@ -982,7 +1031,7 @@
 
             <!-- Project 2: Olympics 2014 -->
             <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
-                <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=800&h=600&fit=crop" alt="Олимпиада 2014 Сочи Красная Поляна" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <img src="images/photo_2026-03-02_17-52-54.jpg" alt="Олимпиада 2014 Сочи Красная Поляна" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Спорт • 2014</span>
                     <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Олимпиада 2014</h3>
@@ -1016,7 +1065,7 @@
 
             <!-- Project 3: Gorki Gorod -->
             <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Горки Город курорт Сочи видеонаблюдение" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <img src="images/photo_2026-03-02_17-52-03.jpg" alt="Горки Город курорт Сочи видеонаблюдение" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">ЖКХ • 2016</span>
                     <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Горки Город</h3>
@@ -1050,7 +1099,7 @@
 
             <!-- Project 4: Sochivodokanal -->
             <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Сочиводоканал промышленность автоматизация" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <img src="images/photo_2026-03-03_10-20-43.jpg" alt="Сочиводоканал промышленность автоматизация" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Промышленность</span>
                     <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Сочиводоканал</h3>
@@ -1084,7 +1133,7 @@
 
             <!-- Project 5: Hotel 5* -->
             <a href="pages/projects.html" class="project-card min-w-[85%] md:min-w-[400px] lg:min-w-[380px] snap-center group relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[420px] flex-shrink-0 scroll-smooth">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Отель 5 звезд Сочи IT инфраструктура" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                <img src="images/photo_2026-03-02_17-52-17.jpg" alt="Отель 5 звезд Сочи IT инфраструктура" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Гостиницы</span>
                     <h3 class="text-white text-lg md:text-lg md:text-2xl font-bold mb-2 md:mb-3">Отель 5*</h3>
@@ -1208,6 +1257,25 @@
                     </div>
                     <h3 class="text-xl font-bold text-brand-dark mb-3">Поддержка 24/7</h3>
                     <p class="text-slate-600">Круглосуточная техническая поддержка и аварийный выезд.</p>
+                </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="mt-16 scroll-reveal">
+                <h3 class="text-2xl md:text-3xl font-bold text-white text-center mb-8">Наши Работы</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105">
+                        <img src="images/photo_2026-03-02_17-52-46.jpg" alt="Тестирование СКС" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105">
+                        <img src="images/photo_2026-03-02_17-52-24.jpg" alt="Электрощит" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105">
+                        <img src="images/photo_2026-03-02_17-52-40.jpg" alt="Шлагбаум с камерой" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105">
+                        <img src="images/photo_2026-03-03_10-20-45.jpg" alt="Монтаж ВОЛС на фасаде" class="w-full h-48 md:h-56 object-cover">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1615,13 +1683,13 @@
                         <li><a href="pages/projects.html" class="hover:text-brand-blue transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-brand-orange"></i>Проекты</a></li>
                         <li><a href="pages/catalog.html" class="hover:text-brand-blue transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-brand-orange"></i>Каталог оборудования</a></li>
                         <li><a href="pages/blog.html" class="hover:text-brand-blue transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-brand-orange"></i>Блог и кейсы</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-brand-blue transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-brand-orange"></i>Политика конфиденциальности</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-brand-blue transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-brand-orange"></i>Политика конф��денциальности</a></li>
                     </ul>
                 </div>
 
                 <!-- Partners -->
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Партнёры</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg">Па��тнёры</h4>
                     <div class="flex flex-wrap gap-2 md:p-3">
                         <div class="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition">Fluke Networks</div>
                         <div class="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition">Hikvision</div>
